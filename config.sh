@@ -2,8 +2,6 @@
 #Narima Script 1.0
 
 clear
-
-
 # my reference to make this
 #https://devconnected.com/how-to-check-if-file-or-directory-exists-in-bash/#
 #https://stackoverflow.com/questions/17368872/how-to-move-or-copy-files-listed-by-find-command-in-unix
