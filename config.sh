@@ -21,7 +21,7 @@ sleep 1
 # Penghapusan Config
 # penghapusan config berguna agar file tidak tertimpa dan mengakibatkan error
 echo "saatnya memasang ulang"
-if [ -d /Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Config/ ]; # mencari folder 
+if [ -d /Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Config ]; # mencari folder 
 then
      echo "ditemukan saat nya dihapus"
      rm -rf Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Config # menghapusnya
@@ -32,12 +32,12 @@ fi
 # Bikin Folder Config
 # bikin ulang ini bertujuan agar script bisa terpasang
 echo "buat folder config dimulai"
-if [ -d /Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Config/ ]; # sama penjelasannya seperti di https://github.com/Ncode2014/PUAuto/blob/fb39c7225e48fba85cef49aa50f52a589ee4532e/config.sh#L47
+if [ -d /Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Config ]; # sama penjelasannya seperti di https://github.com/Ncode2014/PUAuto/blob/fb39c7225e48fba85cef49aa50f52a589ee4532e/config.sh#L47
 then
     echo "/Config Ditemukan Sekarang Proses pemasangan config dimulai."
     else
     echo "/config tidak ditemukan waktu nya bikin ulang"
-    mkdir Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Config/
+    mkdir Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Config
 fi
 
 # Pasang UserGame
@@ -71,11 +71,11 @@ echo "pemasangan lainnnya dimulai"
 if [ $(find Download/ -name 'UserAntiCheat.ini') ];
 then
     echo "Pemasangan dimulai"
-           find /Download/ -type f -name "UserAntiCheat.ini" | xargs cp -t /Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Config
-           find /Download/ -type f -name "server.json" | xargs cp -t /Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Config
-           find /Download/ -type f -name "UserUAE.ini" | xargs cp -t /Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Config
-           find /Download/ -type f -name "UserLogSuppression.ini" | xargs cp -t /Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Config
-           find /Download/ -type f -name "AntiCheat.json" | xargs cp -t /Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Config
+           find /Download/ -type f -name "UserAntiCheat.ini" | xargs cp -t /Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Config/
+           find /Download/ -type f -name "server.json" | xargs cp -t /Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Config/
+           find /Download/ -type f -name "UserUAE.ini" | xargs cp -t /Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Config/
+           find /Download/ -type f -name "UserLogSuppression.ini" | xargs cp -t /Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Config/
+           find /Download/ -type f -name "AntiCheat.json" | xargs cp -t /Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Config/
     else
     echo "file tidak ditemukan pemasangan gagal"
     exit
@@ -83,7 +83,9 @@ fi
     
 # saatnya ke mode pembersihan mode ini berguna agar pubeg berjalan lancar    
 # pembersihan tingkat 1 berisi standar pembersihan biasa
-echo "cleaner......."
+echo "saat nya pembersihan"
+sleep 1
+echo "tingkat pertama dimulai"
 rm -rf Android/Data/com.tencent.ig/cache
 rm Android/data/com.tencent.ig/files/cacheFile.txt
 # pembersihan tingkat 2 berisi pembersihan standar 
@@ -93,7 +95,7 @@ rm -rf Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTracke
 rm -rf Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Pandora/*
 rm -rf Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/LightData/*
 # pembersihan tingkat 3 pembersihan file berbau pufferEifs
-echo "pembersihan tingkat 3"
+echo "pembersihan tingkat 3...... dimulai"
 sleep 3
 rm -rf Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/PufferEifs0/*
 rm -rf Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/PufferEifs1/*
