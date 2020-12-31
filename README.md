@@ -2,7 +2,7 @@
 Tool Pemasang userengine dan usergame secara otomatis sekali jalan
 
 ###
-To Do Project
+Final Release
 
-* fix bug
-* bikin auto stop pas tidak ditemukan file
+
+
