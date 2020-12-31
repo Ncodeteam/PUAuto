@@ -1,22 +1,8 @@
 #!/bin/bash
-#version 1.0
+#Narima Script 1.0
 
 clear
-# Variables
-b='\033[1m'
-u='\033[4m'
-bl='\E[30m'
-r='\E[31m'
-g='\E[32m'
-bu='\E[34m'
-m='\E[35m'
-c='\E[36m'
-w='\E[37m'
-endc='\E[0m'
-enda='\033[0m'
-blue='\e[1;34m'
-cyan='\e[1;36m'
-red='\e[1;39m'
+
 
 # my reference to make this
 #https://devconnected.com/how-to-check-if-file-or-directory-exists-in-bash/#
@@ -27,24 +13,28 @@ red='\e[1;39m'
 #https://www.linuxsec.org/2020/04/penggunaan-if-statement-pada-bash.html
 
 echo "==================================="
-echo -e "1.2 Pemasang UserEngine + UserGame"
+echo -e "1.3 Pemasang User.ini dan Auto cleaner"
 echo -e "created by nekaru"
+echo -e "note : jika kamu terkena banned jangan pernah salahkan installer ini"
+echo -e "resiko ditannggung sendiri"
 echo "==================================="
 sleep 1
 
 # Penghapusan Config
+# penghapusan config berguna agar file tidak tertimpa dan mengakibatkan error
 echo "saatnya memasang ulang"
-if [ -d /Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Config/ ];
+if [ -d /Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Config/ ]; # mencari folder 
 then
      echo "ditemukan saat nya dihapus"
-     rm -rf Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Config
+     rm -rf Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Config # menghapusnya
      else
      echo "tidak ditemukan saatnya bikin ulang"
 fi
 
 # Bikin Folder Config
+# bikin ulang ini bertujuan agar script bisa terpasang
 echo "buat folder config dimulai"
-if [ -d /Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Config/ ];
+if [ -d /Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Config/ ]; # sama penjelasannya seperti di https://github.com/Ncode2014/PUAuto/blob/fb39c7225e48fba85cef49aa50f52a589ee4532e/config.sh#L47
 then
     echo "/Config Ditemukan Sekarang Proses pemasangan config dimulai."
     else
@@ -53,6 +43,8 @@ then
 fi
 
 # Pasang UserGame
+# bagian ini sebenarnya riskan karena apa? karena biasanya Usergame terkandung banyak kode aim dan segala macam yang dimana emang kalau menggunakan kode yang ekstrim
+# mengakibatkan banned akan tetapi resiko ditanggung sendiri
 echo "pemasangan UserGame Dimulai"
 if [ $(find Download/ -name '*Game.ini') ];
 then
@@ -76,20 +68,22 @@ then
 fi
 
 # Pasang beberapa hal
+# ini berguna agar kalian tidak terkena banned akan tetapi ini bukanlah peruntukkannya untuk curang atau segala macam ingat resiko ditanggung sendiri 
 echo "pemasangan lainnnya dimulai"
 if [ $(find Download/ -name 'UserAntiCheat.ini') ];
 then
-    echo "Anticheat eksekusi dimulai"
+    echo "Pemasangan dimulai"
            find /Download/ -type f -name "UserAntiCheat.ini" | xargs cp -t /Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Config
            find /Download/ -type f -name "server.json" | xargs cp -t /Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Config
            find /Download/ -type f -name "UserUAE.ini" | xargs cp -t /Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Config
            find /Download/ -type f -name "UserLogSuppression.ini" | xargs cp -t /Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Config
            find /Download/ -type f -name "AntiCheat.json" | xargs cp -t /Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Config
     else
-    echo "Anticheat tidak ditemukan pemasangan gagal"
+    echo "file tidak ditemukan pemasangan gagal"
     exit
 fi
     
+# saatnya ke mode pembersihan mode ini berguna agar pubeg berjalan lancar    
 # pembersihan tingkat 1 berisi standar pembersihan biasa
 echo "cleaner......."
 rm -rf Android/Data/com.tencent.ig/cache
