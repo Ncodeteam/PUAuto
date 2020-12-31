@@ -83,6 +83,9 @@ fi
     
 # saatnya ke mode pembersihan mode ini berguna agar pubeg berjalan lancar    
 # pembersihan tingkat 1 berisi standar pembersihan biasa
+# base old 
+echo "pemasangan config selesai saatnya pembersihan"
+sleep 5
 echo "saat nya pembersihan"
 sleep 1
 echo "tingkat pertama dimulai"
