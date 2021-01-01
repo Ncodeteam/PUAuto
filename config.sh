@@ -112,6 +112,8 @@ find Android/data/ -depth -name "*nearme*" -type d -exec rm -rf "{}" \;
 find Android/data/ -depth -name "*coloros*" -type d -exec rm -rf "{}" \; 
 find Android/data/ -depth -name "*heytap*" -type d -exec rm -rf "{}" \; 
 find Android/data/ -depth -name "*android*" -type d -exec rm -rf "{}" \; 
+find Android/data/ -depth -name "*oppo*" -type d -exec rm -rf "{}" \; 
+find Android/data/ -depth -name "*opera*" -type d -exec rm -rf "{}" \; 
 find Android/data/ -depth -name "*google*" -type d -exec rm -rf "{}" \; 
 
 #bagian whatsapp cleaner
@@ -128,6 +130,7 @@ rm -rf Android/data/org.telegram.messenger/cache
 
 # menghapus folder kosong gaming
 find Android/ -depth -type d -empty -exec rmdir {} \;
+find . -depth -type d -empty -exec rmdir {} \;
 
 # pubg tingkat sadis karena ini mengakibat compile ulang pas masuk game nya
 rm -rf Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Logs
