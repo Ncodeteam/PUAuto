@@ -94,13 +94,34 @@ find Android/data/ -depth -name "*realme*" -type d -exec rm -rf "{}" \;
 find Android/data/ -depth -name "*nearme*" -type d -exec rm -rf "{}" \;
 find Android/data/ -depth -name "*coloros*" -type d -exec rm -rf "{}" \; 
 find Android/data/ -depth -name "*heytap*" -type d -exec rm -rf "{}" \; 
+find Android/data/ -depth -name "*oppo*" -type d -exec rm -rf "{}" \; 
+find Android/data/ -depth -name "*opera*" -type d -exec rm -rf "{}" \; 
+find Android/data/ -depth -name "*mi*" -type d -exec rm -rf "{}" \; 
+find Android/data/ -depth -name "*xiaomi*" -type d -exec rm -rf "{}" \; 
 sleep 1
 echo -ne '====================       (80%)\r'
+#original telegram and X cleaner
 find Telegram/ -type f -name "*.apk" -exec rm -f {} \;
 find Telegram/ -type f -name "*.sh" -exec rm -f {} \;
 rm -rf Android/data/org.telegram.messenger/cache
+find Android/data/org.thunderdog.challegram/ -type f -name "*.apk" -exec rm -f {} \;
+find Android/data/org.thunderdog.challegram/ -type f -name "*.sh" -exec rm -f {} \;
+find Android/data/org.thunderdog.challegram/ -type f -name "*.zip" -exec rm -f {} \;
+rm -rf Android/data/storage/emulated/0/Android/data/org.thunderdog.challegram/cache
+
+# menghapus folder kosong gaming
 find Android/ -depth -type d -empty -exec rmdir {} \;
 find . -depth -type d -empty -exec rmdir {} \;
+
+# some yeah for MIUI
+rm dctp
+rm did
+
+if [[ -d MIUI ]];
+then
+     rm -rf MIUI
+fi
+
 rm -rf Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Logs
 rm -rf Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Pandora
 rm -rf Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/LightData
