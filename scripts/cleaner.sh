@@ -65,14 +65,21 @@ find . -type f -name "*nomedia*" -exec rm -f {} \;
 # telegram X issue 
 # i found this issue when i workaround this script
 # so i recreate again this folder to fix that
-mkdir Android/data/org.thunderdog.challegram/files/animations
-mkdir Android/data/org.thunderdog.challegram/files/documents
-mkdir Android/data/org.thunderdog.challegram/files/music
-mkdir Android/data/org.thunderdog.challegram/files/photos
-mkdir Android/data/org.thunderdog.challegram/files/temp
-mkdir Android/data/org.thunderdog.challegram/files/video_notes
-mkdir Android/data/org.thunderdog.challegram/files/videos
-mkdir Android/data/org.thunderdog.challegram/files/voice
+#added if function because it will remake the folder 
+
+if [ -d Android/data/org.thunderdog.challegram/files ];
+then 
+    mkdir Android/data/org.thunderdog.challegram/files/animations
+    mkdir Android/data/org.thunderdog.challegram/files/documents
+    mkdir Android/data/org.thunderdog.challegram/files/music
+    mkdir Android/data/org.thunderdog.challegram/files/photos
+    mkdir Android/data/org.thunderdog.challegram/files/temp
+    mkdir Android/data/org.thunderdog.challegram/files/video_notes
+    mkdir Android/data/org.thunderdog.challegram/files/videos
+    mkdir Android/data/org.thunderdog.challegram/files/voice
+    else
+    echo "nothing"
+fi
 
 # some yeah for MIUI
 rm dctp 2>/dev/null
