@@ -100,3 +100,12 @@ if [[ -d MIUI ]];
 then
      rm -rf MIUI 2>/dev/null
 fi
+
+# root side 
+# please running on root access
+
+#fstrim 
+fstrim -v /data
+fstrim -v /cache
+fstrim -v /system
+fstrim -v /vendor
