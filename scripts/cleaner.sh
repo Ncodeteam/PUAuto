@@ -105,7 +105,7 @@ fi
 # please running on root access
 
 #fstrim 
-fstrim -v /data
-fstrim -v /cache
-fstrim -v /system
-fstrim -v /vendor
+fstrim -v /data 2>/dev/null
+fstrim -v /cache 2>/dev/null
+fstrim -v /system 2>/dev/null
+fstrim -v /vendor 2>/dev/null
