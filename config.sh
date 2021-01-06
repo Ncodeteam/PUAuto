@@ -11,16 +11,18 @@ sleep 10
 clear
 
 echo "==================================="
-echo -e "1.5 PUBG INSTALLER CONFIG & BOOSTER"
+echo -e "1.6 PUBG INSTALLER CONFIG & BOOSTER"
 echo -e "created by nekaru"
 echo -e "note : jika kamu terkena banned jangan pernah salahkan installer ini"
 echo -e "resiko ditannggung sendiri"
 echo -e "pastikan gunakan scala yang satu file aja contoh extract hanya 360P"
+echo -e "only for pubg mobile global not for another pubg mobile installer"
 echo "==================================="
 sleep 5
 echo "menuju tkp"
 sleep 2
 clear
+
 # cangluk
 echo -e "========================================="
 echo -e "changelog"
