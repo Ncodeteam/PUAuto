@@ -7,14 +7,22 @@ echo "cleaner berjalan......"
 
 #standar
 rm -rf mtklog 2>/dev/null
-rm -rf .* 
 rm -rf oppo_log 2>/dev/null
 rm -rf ColorOS 2>/dev/null
 rm -rf miniplay 2>/dev/null
 rm -rf SHAREit 2>/dev/null
 rm -rf Browser 2>/dev/null
 
+#for some folder 
+if [ -d .MIThemeEditor/ ];
+  then
+  echo 
+  else
+  rm -rf .*
+fi
+
 #vendor hape
+echo "hapus vendor folder hape"
 find Android/data/ -depth -name "*realme*" -type d -exec rm -rf "{}" \; 
 find Android/data/ -depth -name "*nearme*" -type d -exec rm -rf "{}" \;
 find Android/data/ -depth -name "*coloros*" -type d -exec rm -rf "{}" \; 
@@ -25,20 +33,24 @@ find Android/data/ -depth -name "*mi*" -type d -exec rm -rf "{}" \;
 find Android/data/ -depth -name "*xiaomi*" -type d -exec rm -rf "{}" \; 
 
 #music cache folder
+echo "hapus folder cache folder"
 find . -depth -name "*joox*" -type d -exec rm -rf "{}" \; 2>/dev/null
 find . -depth -name "*spotify*" -type d -exec rm -rf "{}" \; 2>/dev/null
 
 # khusus google dan android
+echo "hapus google and shit folder"
 find Android/data/ -depth -name "*google*" -type d -exec rm -rf "{}" \; 
 find Android/data/ -depth -name "*android*" -type d -exec rm -rf "{}" \; 
 
 # khusus whatsapp
+echo "hapus whatsapp useless folder"
 find Whatsapp/ -depth -name "*Shared*" -type d -exec rm -rf "{}" \; 
 find Whatsapp/ -depth -name "*Thumbs*" -type d -exec rm -rf "{}" \; 
 find Whatsapp/ -depth -name "*trash*" -type d -exec rm -rf "{}" \; 
 find Whatsapp/ -depth -name "*Backups*" -type d -exec rm -rf "{}" \; 
 find Whatsapp/ -depth -name "*Databases*" -type d -exec rm -rf "{}" \;
 
+echo "moar cleaning unecessery"
 #original telegram cleaner
 find Telegram/ -type f -name "*.apk" -exec rm -f {} \; 2>/dev/null
 find Telegram/ -type f -name "*.sh" -exec rm -f {} \;  2>/dev/null
@@ -53,6 +65,7 @@ find Android/data/nekox.messanger/files/ -type f -name "*.zip" -exec rm -f {} \;
 
 # telegram x cleaner
 find Android/data/org.thunderdog.challegram/ -type f -name "*.apk" -exec rm -f {} \; 2>/dev/null
+find Android/data/org.thunderdog.challegram/ -type f -name "*.mp4" -exec rm -f {} \; 2>/dev/null
 find Android/data/org.thunderdog.challegram/ -type f -name "*.jpg" -exec rm -f {} \; 2>/dev/null
 find Android/data/org.thunderdog.challegram/ -type f -name "*.sh" -exec rm -f {} \; 2>/dev/null
 find Android/data/org.thunderdog.challegram/ -type f -name "*.zip" -exec rm -f {} \; 2>/dev/null
@@ -89,7 +102,7 @@ then
     mkdir Android/data/org.thunderdog.challegram/files/videos
     mkdir Android/data/org.thunderdog.challegram/files/voice
     else
-    echo "nothing"
+    echo 
 fi
 
 # some yeah for MIUI
@@ -98,7 +111,10 @@ rm did 2>/dev/null
 
 if [[ -d MIUI ]];
 then
-     rm -rf MIUI 2>/dev/null
+     rm -rf MIUI/.config 2>/dev/null
+     rm -rf MIUI/Gallery 2>/dev/null
+     rm -rf MIUI/snapshot 2>/dev/null
+     rm -rf MIUI/.cache
 fi
 
 # root side 
@@ -109,3 +125,73 @@ fstrim -v /data 2>/dev/null
 fstrim -v /cache 2>/dev/null
 fstrim -v /system 2>/dev/null
 fstrim -v /vendor 2>/dev/null
+fstrim -v /product 2>/dev/null
+
+# moar cleaning
+# based from SQ injector By Akira (akira-vishal @ GitHub)
+
+
+if [ -d /sdcard ];
+then
+    rm -rf /sdcard/LOST.DIR
+    rm -rf /sdcard/found000
+    rm -rf /sdcard/LazyList
+    rm -rf /sdcard/albumthumbs
+    rm -rf /sdcard/Backucup
+    rm -rf /sdcard/wlan_logs
+    rm -rf /sdcard/ramdump
+    rm -rf /sdcard/UnityAdsVideoCache
+    else 
+    echo 
+fi
+
+if [ -d /data ];
+then
+      rm -r /data/dalvik-cache 2>/dev/null
+      rm -rf /cache/*.apk 2>/dev/null
+      rm -f /cache/*.tmp 2>/dev/null
+      rm -f /data/*.log 2>/dev/null
+      rm -f /data/*.txt 2>/dev/null
+      rm -f /data/anr/* 2>/dev/null
+      rm -f /data/backup/pending/*.tmp 2>/dev/null
+      rm -f /data/cache/*.* 2>/dev/null
+      rm -f /data/data/*.log 2>/dev/null
+      rm -f /data/data/*.txt 2>/dev/null
+      rm -f /data/log/*.log 2>/dev/null
+      rm -f /data/log/*.txt 2>/dev/null
+      rm -f /data/local/*.apk 2>/dev/null
+      rm -f /data/local/*.log 2>/dev/null
+      rm -f /data/local/*.txt  2>/dev/null
+      rm -f /data/local/tmp/* 2>/dev/null
+      rm -f /data/last_alog/*.log 2>/dev/null
+      rm -f /data/last_alog/*.txt 2>/dev/null
+      rm -f /data/last_kmsg/*.log 2>/dev/null
+      rm -f /data/last_kmsg/*.txt 2>/dev/null
+      rm -f /data/mlog/* 2>/dev/null
+      rm -f /data/system/*.log 2>/dev/null
+      rm -f /data/system/*.txt 2>/dev/null
+      rm -f /data/system/dropbox/* 2>/dev/null
+      rm -rf /data/system/usagestats/* 2>/dev/null
+      rm -f /data/system/shared_prefs/* 2>/dev/null
+      rm -f /data/tombstones/* 2>/dev/null
+      rm -f /data/dalvik-cache/*.apk 2>/dev/null
+      rm -f /data/dalvik-cache/*.tmp 2>/dev/null
+      rm -f /data/last_alog/*.log 2>/dev/null
+      rm -f /data/last_alog/*.txt 2>/dev/null
+      rm -f /data/last_kmsg/*.log 2>/dev/null
+      rm -f /data/last_kmsg/*.txt 2>/dev/null
+      rm -f /data/mlog/* 2>/dev/null
+      rm -f /data/system/*.log 2>/dev/null
+      rm -f /data/system/*.txt 2>/dev/null
+      rm -f /data/system/dropbox/* 2>/dev/null
+      rm -rf /data/system/usagestats/* 2>/dev/null
+      rm -f /data/system/shared_prefs/* 2>/dev/null
+      rm -f /data/tombstones/* 2>/dev/null
+    else 
+    echo 
+fi
+
+# my friend has reported some annoying folder call "browsermetrics"
+# so i make it to force to delete them
+
+find /data/user -depth -name "*BrowserMetrics*" -type d -exec rm -rf "{}" \; 2>/dev/null
