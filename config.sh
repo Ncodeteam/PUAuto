@@ -1,19 +1,14 @@
 #!/bin/bash
-#Narima Script 1.1
+#Narima Script 1.4
 #changelog
-# a).fix a bug when you copied
-# b).added more cleaning
+# a).just added
 
 clear
-# my reference to make this
-#https://devconnected.com/how-to-check-if-file-or-directory-exists-in-bash/#
-#https://stackoverflow.com/questions/17368872/how-to-move-or-copy-files-listed-by-find-command-in-unix // not working
-#https://unix.stackexchange.com/questions/46541/how-can-i-use-bashs-if-test-and-find-commands-together
-#https://www.cyberciti.biz/tips/find-out-if-file-exists-with-conditional-expressions.html
-#https://ryanstutorials.net/bash-scripting-tutorial/bash-if-statements.php
-#https://www.linuxsec.org/2020/04/penggunaan-if-statement-pada-bash.html
-#https://stackoverflow.com/questions/5241625/find-and-copy-files
-#https://stackoverflow.com/questions/238073/how-to-add-a-progress-bar-to-a-shell-script
+
+echo "tolong letakin script ini di /storage/emulated/0 jangan diletakin & jalankan di folder/subfolder manapun"
+echo "kalau tidak diletakan jangan salah script ini kalau misalnya gagal dalam pemasangan"
+sleep 10
+clear
 
 echo "==================================="
 echo -e "1.5 PUBG INSTALLER CONFIG & BOOSTER"
@@ -29,10 +24,7 @@ clear
 # cangluk
 echo -e "========================================="
 echo -e "changelog"
-echo -e "a).fix bug."
-echo -e "b).added cleaner xiaomi,oppo dan realme"
-echo -e "c).scalability supported"
-echo -e "d).added progress bar"
+echo -e "a).added support for pubg kr."
 echo -e "========================================="
 sleep 5
 
@@ -64,6 +56,13 @@ rm -rf Android/data/com.tencent.ig/files/TGPA
 rm -rf Android/data/com.tencent.ig/files/ProgramBinaryCache
 rm -rf Android/Data/com.tencent.ig/cache
 rm Android/data/com.tencent.ig/files/cacheFile.txt
+
+#pubg kr
+rm -rf Android/data/com.pubg.krmobile/files/TGPA 2>/dev/null
+rm -rf Android/data/com.pubg.krmobile/files/ProgramBinaryCache 2>/dev/null
+rm -rf Android/Data/com.pubg.krmobile/cache 2>/dev/null
+rm Android/data/com.pubg.krmobile/files/cacheFile.txt 2>/dev/null
+
 sleep 1
 echo -ne '==================   (100%)\r'
 echo -ne '\n'
@@ -75,6 +74,7 @@ echo "pembersihan tingkat dua"
 echo "tingkat ini termasuk paling medium karena ini akan membersihkan sampah yang sering numpuk"
 echo "akan tetapi jika ada kek file video offline youtube siap siap aj bakal hilang"
 echo "tingkatan ini termasuk sadis dan menakutkan karena keajaibannya dan kesadisan nya"
+echo "warning ini akan menyebabkan re-compiling ulang pada pubg"
 sleep 2
 echo "proses dimulai"
 #scrullbar
@@ -100,14 +100,8 @@ find Android/data/ -depth -name "*mi*" -type d -exec rm -rf "{}" \;
 find Android/data/ -depth -name "*xiaomi*" -type d -exec rm -rf "{}" \; 
 sleep 1
 echo -ne '====================       (80%)\r'
-#original telegram and X cleaner
-find Telegram/ -type f -name "*.apk" -exec rm -f {} \;
-find Telegram/ -type f -name "*.sh" -exec rm -f {} \;
-rm -rf Android/data/org.telegram.messenger/cache
-find Android/data/org.thunderdog.challegram/ -type f -name "*.apk" -exec rm -f {} \;
-find Android/data/org.thunderdog.challegram/ -type f -name "*.sh" -exec rm -f {} \;
-find Android/data/org.thunderdog.challegram/ -type f -name "*.zip" -exec rm -f {} \;
-rm -rf Android/data/storage/emulated/0/Android/data/org.thunderdog.challegram/cache
+
+# if you want advanced cleaner using cleaner.sh on https://github.com/Ncode2014/PUAuto/blob/main/scripts/cleaner.sh
 
 # menghapus folder kosong gaming
 find Android/ -depth -type d -empty -exec rmdir {} \;
@@ -125,6 +119,12 @@ fi
 rm -rf Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Logs
 rm -rf Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Pandora
 rm -rf Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/LightData
+
+#pubg kr
+rm -rf Android/data/com.pubg.krmobile/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Logs 2>/dev/null
+rm -rf Android/data/com.pubg.krmobile/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Pandora 2>/dev/null
+rm -rf Android/data/com.pubg.krmobile/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/LightData 2>/dev/null
+
 sleep 1
 echo -ne '=========================       (100%)\r'
 echo -ne '\n'
@@ -147,12 +147,22 @@ echo -ne '================     (80%)\r'
 rm -rf Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/PufferEifs0
 rm -rf Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/PufferEifs1
 rm -rf Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/PufferTmpDir
+
+#pubg kr
+rm -rf Android/data/com.pubg.krmobile/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/PufferEifs0 2>/dev/null
+rm -rf Android/data/com.pubg.krmobile/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/PufferEifs1 2>/dev/null
+rm -rf Android/data/com.pubg.krmobile/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/PufferTmpDir 2>/dev/null
+
 sleep 1
 echo -ne '==================   (100%)\r'
 echo -ne '\n'
 echo -e "pembersihan selesai sekarang masuk ke pemasangan"
 sleep 3
 clear
+
+# honestly since idk usergame & userengine can work on another version pubg mobile
+# so don't make a issue in this repo if you not figured how userengine & usergame work
+# on another version pubg so don't give me a hope to added that
 
 # Bagian Utama Pemasangan Config
 echo "saatnya memasang ulang"
