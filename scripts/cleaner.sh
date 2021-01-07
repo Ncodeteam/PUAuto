@@ -26,7 +26,7 @@ rm -rf Android/data/*xiaomi*/
 #music cache folder
 echo "hapus folder cache folder"
 rm -rf *joox*/
-rm -rf *spotify*/
+rm -rf Android/data/*spotify*/
 
 # khusus google dan android
 echo "hapus google and shit folder"
