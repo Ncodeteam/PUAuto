@@ -77,16 +77,19 @@ if [ -d Android/data/com.miHoYo.GenshinImpact ]; then
 echo "data genshin ditemukan jangan hapus"
 else
 find Android/ -depth -type d -empty -exec rmdir {} \;
+fi
 
 if [ -d Android/data/com.iudesk.android.photo.editor ]; then
 echo "data photo editor ditemukan jangan hapus"
 else
 find Android/ -depth -type d -empty -exec rmdir {} \;
+fi
 
 if [ -d Android/data/mark.via.gp ]; then
 echo "data via ditemukan jangan dihapus"
 else
 find Android/ -depth -type d -empty -exec rmdir {} \;
+fi
 
 # delete file kosong
 #find Android/ -depth -type d -empty -exec rmdir {} \;
