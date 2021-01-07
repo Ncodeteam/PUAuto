@@ -26,7 +26,7 @@ rm -rf Android/data/*xiaomi*/
 #music cache folder
 echo "hapus folder cache folder"
 rm -rf *joox*/
-rm -rf *spotify/
+rm -rf *spotify*/
 
 # khusus google dan android
 echo "hapus google and shit folder"
@@ -60,6 +60,27 @@ rm -f *apk
 
 #some function
 find Android/data -depth -name "*cache*" -type d -exec rm -rf "{}" \; 
+
+# recomeback
+#original telegram cleaner
+rm -rf Android/data/org.telegram.messenger/cache 2>/dev/null
+rm -f Telegram/*.apk
+rm -f Telegram/*.sh
+rm -f Telegram/*.zip
+
+#neko X 
+rm -rf Android/data/nekox.messanger/files/caches 2>/dev/null
+rm -f Android/data/nekox.messanger/files/*.zip/
+rm -f Android/data/nekox.messanger/files/*.sh/
+rm -f Android/data/nekox.messanger/files/*.apk/
+
+# telegram x cleaner
+rm -rf Android/data/org.thunderdog.challegram/cache 2>/dev/null
+rm -f Android/data/org.thunderdog.challegram/*.zip/
+rm -f Android/data/org.thunderdog.challegram/*.sh/
+rm -f Android/data/org.thunderdog.challegram/*.jpg/
+rm -f Android/data/org.thunderdog.challegram/*.mp4/
+rm -f Android/data/org.thunderdog.challegram/*.apk/
 
 # telegram X issue 
 # i found this issue when i workaround this script
