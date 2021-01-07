@@ -3,6 +3,10 @@
 #changelog
 # a).just added
 
+# just a plan maybe i remove this if this script have done final version
+# a).adding support for another pubg 
+# b).added effectively usercustom.ini
+
 clear
 
 echo "tolong letakin script ini di /storage/emulated/0 jangan diletakin & jalankan di folder/subfolder manapun"
@@ -92,14 +96,6 @@ find Whatsapp/ -depth -name "*Backups*" -type d -exec rm -rf "{}" \;
 find Whatsapp/ -depth -name "*Databases*" -type d -exec rm -rf "{}" \;
 sleep 1
 echo -ne '==============          (60%)\r'
-find Android/data/ -depth -name "*realme*" -type d -exec rm -rf "{}" \; 
-find Android/data/ -depth -name "*nearme*" -type d -exec rm -rf "{}" \;
-find Android/data/ -depth -name "*coloros*" -type d -exec rm -rf "{}" \; 
-find Android/data/ -depth -name "*heytap*" -type d -exec rm -rf "{}" \; 
-find Android/data/ -depth -name "*oppo*" -type d -exec rm -rf "{}" \; 
-find Android/data/ -depth -name "*opera*" -type d -exec rm -rf "{}" \; 
-find Android/data/ -depth -name "*mi*" -type d -exec rm -rf "{}" \; 
-find Android/data/ -depth -name "*xiaomi*" -type d -exec rm -rf "{}" \; 
 sleep 1
 echo -ne '====================       (80%)\r'
 
