@@ -48,7 +48,7 @@ find Android/ -depth -type d -empty -exec rmdir {} \;
 find . -depth -type d -empty -exec rmdir {} \;
 
 #log & more
-rm -rf *log*
+find . -depth -name "*log*" -type d -exec rm -rf "{}" \;
 find . -type f -name "*iacovnfld*" -exec rm -f {} \;
 find . -type f -name "*.log" -exec rm -f {} \;
 
