@@ -49,8 +49,8 @@ find . -depth -type d -empty -exec rmdir {} \;
 
 #log & more
 rm -rf *log*
-rm -rf *thumbnails*
-rm -f *.log
+find . -type f -name "*iacovnfld*" -exec rm -f {} \;
+find . -type f -name "*.log" -exec rm -f {} \;
 
 # nomedia yang berarti akan membuat semua yang gk ingin dibaca galeri akhirnya terbaca
 find . -type f -name "*nomedia*" -exec rm -f {} \;
@@ -58,8 +58,9 @@ find . -type f -name "*nomedia*" -exec rm -f {} \;
 #thumbnail cleaner
 find . -depth -name "*thumbnails*" -type d -exec rm -rf {} \;
 
+
 # penghapusan apk biar gk numpuk
-rm -f *apk
+find . -type f -name "*.apk" -exec rm -f {} \;
 
 #some function
 find Android/data -depth -name "*cache*" -type d -exec rm -rf "{}" \; 
