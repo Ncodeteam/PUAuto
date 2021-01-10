@@ -53,7 +53,10 @@ rm -rf *thumbnails*
 rm -f *.log
 
 # nomedia yang berarti akan membuat semua yang gk ingin dibaca galeri akhirnya terbaca
-find . -type f -name "*nomedia*" -exec rm -f {} \; 
+find . -type f -name "*nomedia*" -exec rm -f {} \;
+
+#thumbnail cleaner
+find . -depth -name "*thumbnails*" -type d -exec rm -rf {} \;
 
 # penghapusan apk biar gk numpuk
 rm -f *apk
@@ -61,26 +64,30 @@ rm -f *apk
 #some function
 find Android/data -depth -name "*cache*" -type d -exec rm -rf "{}" \; 
 
-# recomeback
 #original telegram cleaner
+find Telegram/ -type f -name "*.apk" -exec rm -f {} \; 2>/dev/null
+find Telegram/ -type f -name "*.sh" -exec rm -f {} \;  2>/dev/null
+find Telegram/ -type f -name "*.zip" -exec rm -f {} \;  2>/dev/null
+find Telegram/ -type f -name "*.mp3" -exec rm -f {} \;  2>/dev/null
+find Telegram/ -type f -name "*.mp4" -exec rm -f {} \;  2>/dev/null
 rm -rf Android/data/org.telegram.messenger/cache 2>/dev/null
-rm -f Telegram/*.apk
-rm -f Telegram/*.sh
-rm -f Telegram/*.zip
 
 #neko X 
 rm -rf Android/data/nekox.messanger/files/caches 2>/dev/null
-rm -f Android/data/nekox.messanger/files/*.zip/
-rm -f Android/data/nekox.messanger/files/*.sh/
-rm -f Android/data/nekox.messanger/files/*.apk/
+find Android/data/nekox.messanger/files/ -type f -name "*.apk" -exec rm -f {} \; 2>/dev/null
+find Android/data/nekox.messanger/files/ -type f -name "*.sh" -exec rm -f {} \;  2>/dev/null
+find Android/data/nekox.messanger/files/ -type f -name "*.zip" -exec rm -f {} \;  2>/dev/null
+find Android/data/nekox.messanger/files/ -type f -name "*.mp4" -exec rm -f {} \;  2>/dev/null
+find Android/data/nekox.messanger/files/ -type f -name "*.mp3" -exec rm -f {} \;  2>/dev/null
 
 # telegram x cleaner
+find Android/data/org.thunderdog.challegram/ -type f -name "*.apk" -exec rm -f {} \; 2>/dev/null
+find Android/data/org.thunderdog.challegram/ -type f -name "*.mp4" -exec rm -f {} \; 2>/dev/null
+find Android/data/org.thunderdog.challegram/ -type f -name "*.jpg" -exec rm -f {} \; 2>/dev/null
+find Android/data/org.thunderdog.challegram/ -type f -name "*.sh" -exec rm -f {} \; 2>/dev/null
+find Android/data/org.thunderdog.challegram/ -type f -name "*.zip" -exec rm -f {} \; 2>/dev/null
+find Android/data/org.thunderdog.challegram/ -type f -name "*.mp3" -exec rm -f {} \; 2>/dev/null
 rm -rf Android/data/org.thunderdog.challegram/cache 2>/dev/null
-rm -f Android/data/org.thunderdog.challegram/*.zip/
-rm -f Android/data/org.thunderdog.challegram/*.sh/
-rm -f Android/data/org.thunderdog.challegram/*.jpg/
-rm -f Android/data/org.thunderdog.challegram/*.mp4/
-rm -f Android/data/org.thunderdog.challegram/*.apk/
 
 # telegram X issue 
 # i found this issue when i workaround this script
@@ -131,7 +138,7 @@ fi
 # cleaning data
 if [ -d /data ];
 then
-      rm -r /data/dalvik-cache 2>/dev/null
+      rm -rf /data/dalvik-cache 2>/dev/null
       rm -rf /cache/*.apk 2>/dev/null
       rm -f /cache/*.tmp 2>/dev/null
       rm -f /data/*.log 2>/dev/null
