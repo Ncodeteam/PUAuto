@@ -7,6 +7,9 @@
 # a).adding support for another pubg 
 # b).added effectively usercustom.ini
 
+# just a note i not responsible if you found this script to make something illegal 
+# so don't report me as author on this script
+
 clear
 
 echo "tolong letakin script ini di /storage/emulated/0 jangan diletakin & jalankan di folder/subfolder manapun"
@@ -15,7 +18,7 @@ sleep 10
 clear
 
 echo "==================================="
-echo -e "1.6 PUBG INSTALLER CONFIG & BOOSTER"
+echo -e "1.7 PUBG INSTALLER CONFIG & BOOSTER"
 echo -e "created by nekaru"
 echo -e "note : jika kamu terkena banned jangan pernah salahkan installer ini"
 echo -e "resiko ditannggung sendiri"
@@ -31,12 +34,9 @@ clear
 echo -e "========================================="
 echo -e "changelog"
 echo -e "a).added support for pubg kr."
+echo -e "b).delete cleaner because useless"
 echo -e "========================================="
 sleep 5
-
-# cleaner xiaomi,oppo dan realme dan pubg
-# buat lebih kenceng perfoma dan cepat hamil xixixixixixi
-
 echo "pembersihan tingkat 1"
 echo "pembersihan ini berisi pembersihan sederhana"
 sleep 5
@@ -51,13 +51,6 @@ sleep 1
 echo -ne '=============         (60%)\r'
 sleep 1
 echo -ne '================     (80%)\r'
-rm -rf mtklog
-rm -rf .*
-rm -rf oppo_log
-rm -rf ColorOS
-rm -rf miniplay
-rm -rf SHAREit
-rm -rf Browser
 rm -rf Android/data/com.tencent.ig/files/TGPA
 rm -rf Android/data/com.tencent.ig/files/ProgramBinaryCache
 rm -rf Android/Data/com.tencent.ig/cache
@@ -87,33 +80,12 @@ echo "proses dimulai"
 echo -ne '=====                    (25%)\r'
 sleep 1
 echo -ne '===========               (40%)\r'
-find Android/data/ -depth -name "*android*" -type d -exec rm -rf "{}" \; 
-find Android/data/ -depth -name "*google*" -type d -exec rm -rf "{}" \; 
-find Whatsapp/ -depth -name "*Shared*" -type d -exec rm -rf "{}" \; 
-find Whatsapp/ -depth -name "*Thumbs*" -type d -exec rm -rf "{}" \; 
-find Whatsapp/ -depth -name "*trash*" -type d -exec rm -rf "{}" \; 
-find Whatsapp/ -depth -name "*Backups*" -type d -exec rm -rf "{}" \; 
-find Whatsapp/ -depth -name "*Databases*" -type d -exec rm -rf "{}" \;
 sleep 1
 echo -ne '==============          (60%)\r'
 sleep 1
 echo -ne '====================       (80%)\r'
 
 # if you want advanced cleaner using cleaner.sh on https://github.com/Ncode2014/PUAuto/blob/main/scripts/cleaner.sh
-
-# menghapus folder kosong gaming
-find Android/ -depth -type d -empty -exec rmdir {} \;
-find . -depth -type d -empty -exec rmdir {} \;
-
-# some yeah for MIUI
-rm dctp
-rm did
-
-if [[ -d MIUI ]];
-then
-     rm -rf MIUI
-fi
-
 rm -rf Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Logs
 rm -rf Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Pandora
 rm -rf Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/LightData
@@ -142,9 +114,11 @@ sleep 1
 echo -ne '=============         (60%)\r'
 sleep 1
 echo -ne '================     (80%)\r'
-rm -rf Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/PufferEifs0
-rm -rf Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/PufferEifs1
-rm -rf Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/PufferTmpDir
+
+# useless script since if i activate this pubg always reload again
+#rm -rf Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/PufferEifs0
+#rm -rf Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/PufferEifs1
+#rm -rf Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/PufferTmpDir
 
 #pubg kr
 rm -rf Android/data/com.pubg.krmobile/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/PufferEifs0 2>/dev/null
