@@ -1,5 +1,5 @@
 #!/bin/bash
-#Narima Script 1.4
+#Narima Script 1.8
 #changelog
 # a).just added
 
@@ -18,7 +18,7 @@ sleep 10
 clear
 
 echo "==================================="
-echo -e "1.7 PUBG INSTALLER CONFIG & BOOSTER"
+echo -e "1.8 PUBG INSTALLER CONFIG & BOOSTER"
 echo -e "created by nekaru"
 echo -e "note : jika kamu terkena banned jangan pernah salahkan installer ini"
 echo -e "resiko ditannggung sendiri"
@@ -35,6 +35,7 @@ echo -e "========================================="
 echo -e "changelog"
 echo -e "a).added support for pubg kr."
 echo -e "b).delete cleaner because useless"
+echo -e "c).added support new extension"
 echo -e "========================================="
 sleep 5
 echo "pembersihan tingkat 1"
@@ -260,6 +261,7 @@ then
         find Download/ -name '*AntiCheat*.ini' -exec cp "{}" Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Config/  \;
         find Download/ -name '*Server*.json' -exec cp "{}" Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Config/  \;
         find Download/ -name '*UserUAE*.ini' -exec cp "{}" Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Config/  \;
+        find Download/ -name '*BaseDeviceProfiles*.json' -exec cp "{}" Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Config/  \;
         sleep 1
         echo -ne '===========     (80%)\r'
         sleep 1
