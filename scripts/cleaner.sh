@@ -24,6 +24,18 @@ rm -rf Android/data/*opera*/
 rm -rf Android/data/*xiaomi*/
 rm -rf Android/data/*MusicApp*/
 
+#trash removed
+rm -rf Android/data/*mi*/
+rm -rf Android/data/*lenovo*/
+rm -rf Android/data/*snssdk*/
+rm -rf Android/data/*facebook*/
+rm -rf Android/data/*tutotoons*/
+rm -rf Android/data/*mind*/
+rm -rf Android/data/*UCMobile*/
+rm -rf Android/data/*babe*/
+rm -rf Android/data/*group*/
+rm -rf Android/data/*care*/
+
 #testing 
 rm -rf Android/data/*Music*/
 rm -rf Android/data/*music*/
@@ -51,6 +63,10 @@ echo "moar cleaning unecessery"
 # delete file kosong
 find Android/ -depth -type d -empty -exec rmdir {} \;
 find . -depth -type d -empty -exec rmdir {} \;
+
+# re-emplement empty folder cleaning for bash old version
+# based https://unix.stackexchange.com/a/241211
+find . -type d -depth -exec rmdir {} + 2>/dev/null
 
 #log & more
 find . -depth -name "*log*" -type d -exec rm -rf "{}" \;
