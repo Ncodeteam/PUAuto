@@ -22,6 +22,11 @@ rm -rf Android/data/*coloros*/
 rm -rf Android/data/*oppo*/
 rm -rf Android/data/*opera*/
 rm -rf Android/data/*xiaomi*/
+rm -rf Android/data/*MusicApp*/
+
+#testing 
+rm -rf Android/data/*Music*/
+rm -rf Android/data/*music*/
 
 #music cache folder
 echo "hapus folder cache folder"
@@ -65,26 +70,46 @@ find . -type f -name "*.apk" -exec rm -f {} \;
 #some function
 find Android/data -depth -name "*cache*" -type d -exec rm -rf "{}" \; 
 
+echo "membersihkan telegram"
+
 #original telegram cleaner
 find Telegram/ -type f -name "*.apk" -exec rm -f {} \; 2>/dev/null
-find Telegram/ -type f -name "*.sh" -exec rm -f {} \;  2>/dev/null
-find Telegram/ -type f -name "*.zip" -exec rm -f {} \;  2>/dev/null
-find Telegram/ -type f -name "*.mp3" -exec rm -f {} \;  2>/dev/null
-find Telegram/ -type f -name "*.mp4" -exec rm -f {} \;  2>/dev/null
+find Telegram/ -type f -name "*.apk" -exec rm -f {} \; 2>/dev/null
+find Telegram/ -type f -name "*.mp4" -exec rm -f {} \; 2>/dev/null
+find Telegram/ -type f -name "*.jpg" -exec rm -f {} \; 2>/dev/null
+find Telegram/ -type f -name "*.oga" -exec rm -f {} \; 2>/dev/null
+find Telegram/ -type f -name "*.pdf" -exec rm -f {} \; 2>/dev/null
+find Telegram/ -type f -name "*.flac" -exec rm -f {} \; 2>/dev/null
+find Telegram/ -type f -name "*.txt" -exec rm -f {} \; 2>/dev/null
+find Telegram/ -type f -name "*.png" -exec rm -f {} \; 2>/dev/null
+find Telegram/ -type f -name "*.sh" -exec rm -f {} \; 2>/dev/null
+find Telegram/ -type f -name "*.zip" -exec rm -f {} \; 2>/dev/null
+find Telegram/ -type f -name "*.mp3" -exec rm -f {} \; 2>/dev/null
 rm -rf Android/data/org.telegram.messenger/cache 2>/dev/null
 
 #neko X 
 rm -rf Android/data/nekox.messanger/files/caches 2>/dev/null
-find Android/data/nekox.messanger/files/ -type f -name "*.apk" -exec rm -f {} \; 2>/dev/null
-find Android/data/nekox.messanger/files/ -type f -name "*.sh" -exec rm -f {} \;  2>/dev/null
-find Android/data/nekox.messanger/files/ -type f -name "*.zip" -exec rm -f {} \;  2>/dev/null
-find Android/data/nekox.messanger/files/ -type f -name "*.mp4" -exec rm -f {} \;  2>/dev/null
-find Android/data/nekox.messanger/files/ -type f -name "*.mp3" -exec rm -f {} \;  2>/dev/null
+find Android/data/nekox.messanger/files -type f -name "*.apk" -exec rm -f {} \; 2>/dev/null
+find Android/data/nekox.messanger/files -type f -name "*.mp4" -exec rm -f {} \; 2>/dev/null
+find Android/data/nekox.messanger/files -type f -name "*.jpg" -exec rm -f {} \; 2>/dev/null
+find Android/data/nekox.messanger/files -type f -name "*.oga" -exec rm -f {} \; 2>/dev/null
+find Android/data/nekox.messanger/files -type f -name "*.pdf" -exec rm -f {} \; 2>/dev/null
+find Android/data/nekox.messanger/files -type f -name "*.flac" -exec rm -f {} \; 2>/dev/null
+find Android/data/nekox.messanger/files -type f -name "*.txt" -exec rm -f {} \; 2>/dev/null
+find Android/data/nekox.messanger/files -type f -name "*.png" -exec rm -f {} \; 2>/dev/null
+find Android/data/nekox.messanger/files -type f -name "*.sh" -exec rm -f {} \; 2>/dev/null
+find Android/data/nekox.messanger/files -type f -name "*.zip" -exec rm -f {} \; 2>/dev/null
+find Android/data/nekox.messanger/files -type f -name "*.mp3" -exec rm -f {} \; 2>/dev/null
 
 # telegram x cleaner
 find Android/data/org.thunderdog.challegram/ -type f -name "*.apk" -exec rm -f {} \; 2>/dev/null
 find Android/data/org.thunderdog.challegram/ -type f -name "*.mp4" -exec rm -f {} \; 2>/dev/null
 find Android/data/org.thunderdog.challegram/ -type f -name "*.jpg" -exec rm -f {} \; 2>/dev/null
+find Android/data/org.thunderdog.challegram/ -type f -name "*.oga" -exec rm -f {} \; 2>/dev/null
+find Android/data/org.thunderdog.challegram/ -type f -name "*.pdf" -exec rm -f {} \; 2>/dev/null
+find Android/data/org.thunderdog.challegram/ -type f -name "*.flac" -exec rm -f {} \; 2>/dev/null
+find Android/data/org.thunderdog.challegram/ -type f -name "*.txt" -exec rm -f {} \; 2>/dev/null
+find Android/data/org.thunderdog.challegram/ -type f -name "*.png" -exec rm -f {} \; 2>/dev/null
 find Android/data/org.thunderdog.challegram/ -type f -name "*.sh" -exec rm -f {} \; 2>/dev/null
 find Android/data/org.thunderdog.challegram/ -type f -name "*.zip" -exec rm -f {} \; 2>/dev/null
 find Android/data/org.thunderdog.challegram/ -type f -name "*.mp3" -exec rm -f {} \; 2>/dev/null
@@ -128,9 +153,11 @@ fi
 rm dctp 2>/dev/null
 rm did 2>/dev/null
 
-if [[ -d MIUI ]];
+if [[ -d MIUI/theme ]];
 then
-     rm -rf MIUI
+     echo "cannot removed"
+     else
+     rm -rf MIUI/
 fi
 
 # root side 
@@ -139,6 +166,7 @@ fi
 # cleaning data
 if [ -d /data ];
 then
+      echo "pembersihan sampah data"
       rm -rf /data/dalvik-cache 2>/dev/null
       rm -rf /cache/*.apk 2>/dev/null
       rm -f /cache/*.tmp 2>/dev/null
@@ -193,6 +221,9 @@ fstrim -v /product 2>/dev/null
 # my friend has reported some annoying folder call "browsermetrics"
 # so i make it to force to delete them
 
-find /data/user/ -depth -name "*BrowserMetrics*" -type d -exec rm -rf "{}" \; 2>/dev/null
+# related https://github.com/bromite/bromite/issues/873
+# fixed on Lineage os but seems it's problem from chromium side https://review.lineageos.org/c/LineageOS/android_external_chromium-webview/+/298862/1/patches/no-persistent-histograms.patch#1
+
+#find /data/user/ -depth -name "*BrowserMetrics*" -type d -exec rm -rf "{}" \; 2>/dev/null
 
 echo "pembersihan selesai"
