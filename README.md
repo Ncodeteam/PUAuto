@@ -25,3 +25,6 @@ __read this__
 
 extract folder contain userengine,usergame on folder download and execute this script after that userengine succesfully install
 
+### READ THIS EVERYONE 
+I as a script creator prohibits this script from being commercially made and bought and sold right
+This script is for education only and is not made for illegal things.
