@@ -18,7 +18,7 @@ sleep 10
 clear
 
 echo "==================================="
-echo -e "1.8 PUBG INSTALLER CONFIG & BOOSTER"
+echo -e "1.9 PUBG INSTALLER CONFIG & BOOSTER"
 echo -e "created by nekaru"
 echo -e "note : jika kamu terkena banned jangan pernah salahkan installer ini"
 echo -e "resiko ditannggung sendiri"
@@ -33,9 +33,7 @@ clear
 # cangluk
 echo -e "========================================="
 echo -e "changelog"
-echo -e "a).added support for pubg kr."
-echo -e "b).delete cleaner because useless"
-echo -e "c).added support new extension"
+echo -e "a).better bar loading"
 echo -e "========================================="
 sleep 5
 echo "pembersihan tingkat 1"
@@ -45,13 +43,13 @@ clear
 echo "pembersihan tingkat 1 dimulai"
 
 #scrullbar
-echo -ne '=====                   (25%)\r'
+echo -ne '=======                   (25%)\r'
 sleep 1
-echo -ne '==========              (40%)\r'
+echo -ne '============              (40%)\r'
 sleep 1
-echo -ne '=============         (60%)\r'
+echo -ne '=================         (60%)\r'
 sleep 1
-echo -ne '================     (80%)\r'
+echo -ne '=====================     (80%)\r'
 rm -rf Android/data/com.tencent.ig/files/TGPA
 rm -rf Android/data/com.tencent.ig/files/ProgramBinaryCache
 rm -rf Android/Data/com.tencent.ig/cache
@@ -64,7 +62,7 @@ rm -rf Android/Data/com.pubg.krmobile/cache 2>/dev/null
 rm Android/data/com.pubg.krmobile/files/cacheFile.txt 2>/dev/null
 
 sleep 1
-echo -ne '==================   (100%)\r'
+echo -ne '======================   (100%)\r'
 echo -ne '\n'
 echo "pembersihan pertama telah selesai"
 sleep 5
@@ -78,14 +76,13 @@ echo "warning ini akan menyebabkan re-compiling ulang pada pubg"
 sleep 2
 echo "proses dimulai"
 #scrullbar
-echo -ne '=====                    (25%)\r'
+echo -ne '=======                   (25%)\r'
 sleep 1
-echo -ne '===========               (40%)\r'
+echo -ne '============              (40%)\r'
 sleep 1
-echo -ne '==============          (60%)\r'
+echo -ne '=================         (60%)\r'
 sleep 1
-echo -ne '====================       (80%)\r'
-
+echo -ne '=====================     (80%)\r'
 # if you want advanced cleaner using cleaner.sh on https://github.com/Ncode2014/PUAuto/blob/main/scripts/cleaner.sh
 rm -rf Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Logs
 rm -rf Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Pandora
@@ -97,7 +94,7 @@ rm -rf Android/data/com.pubg.krmobile/files/UE4Game/ShadowTrackerExtra/ShadowTra
 rm -rf Android/data/com.pubg.krmobile/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/LightData 2>/dev/null
 
 sleep 1
-echo -ne '=========================       (100%)\r'
+echo -ne '======================   (100%)\r'
 echo -ne '\n'
 echo "tingkat 2 selesai"
 sleep 5
@@ -175,16 +172,16 @@ then
     clear
     else
     echo "/config tidak ditemukan waktu nya bikin ulang"
-    echo -ne '=====                   (25%)\r'
+    echo -ne '=======                   (25%)\r'
     sleep 1
-    echo -ne '=========              (40%)\r'
+    echo -ne '============              (40%)\r'
     sleep 1
-    echo -ne '=============         (60%)\r'
+    echo -ne '=================         (60%)\r'
     sleep 1
-    echo -ne '================     (80%)\r'
+    echo -ne '=====================     (80%)\r'
     mkdir Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Config
     sleep 1
-    echo -ne '==================   (100%)\r'
+    echo -ne '======================   (100%)\r'
     echo -ne '\n'
     echo "folder telah dibuat"
     sleep 2
@@ -200,16 +197,16 @@ clear
 if [[ $(find Download/. -name '*Game*.ini') ]];
 then
     echo "file usergame ditemukan saatnya memasang...."
-    echo -ne '=====                   (25%)\r'
+    echo -ne '=======                   (25%)\r'
     sleep 1
-    echo -ne '=========              (40%)\r'
+    echo -ne '============              (40%)\r'
     sleep 1
-    echo -ne '=============         (60%)\r'
+    echo -ne '=================         (60%)\r'
     sleep 1
-    echo -ne '================     (80%)\r'
+    echo -ne '=====================     (80%)\r'
     find Download/ -name '*Game*.ini' -exec cp "{}" Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Config/  \;
     sleep 1
-    echo -ne '==================   (100%)\r'
+    echo -ne '======================   (100%)\r'
     echo -ne '\n'
     echo "usergame telah terpasang"
     sleep 3
@@ -224,16 +221,16 @@ echo "pemasangan userEngine dimulai"
 if [[ $(find Download/. -name '*Engine*.ini') ]];
 then
     echo "file engine ditemukan saatnya memasang..."
-    echo -ne '=====                   (25%)\r'
+   echo -ne '=======                   (25%)\r'
     sleep 1
-    echo -ne '=========              (40%)\r'
+    echo -ne '============              (40%)\r'
     sleep 1
-    echo -ne '=============         (60%)\r'
+    echo -ne '=================         (60%)\r'
     sleep 1
-    echo -ne '================     (80%)\r'
+    echo -ne '=====================     (80%)\r'
     find Download/ -name '*Engine*.ini' -exec cp "{}" Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Config/  \;
     sleep 1
-    echo -ne '==================   (100%)\r'
+    echo -ne '======================   (100%)\r'
     echo -ne '\n'
     echo "engine telah terpasang"
     sleep 3
@@ -253,19 +250,19 @@ clear
 if [[ $(find Download/. -name '*AntiCheat*.ini') ]];
 then
     echo "Pemasangan dimulai"
-        echo -ne '=====                   (25%)\r'
+        echo -ne '=======                   (25%)\r'
         sleep 1
-        echo -ne '=======              (40%)\r'
+        echo -ne '============              (40%)\r'
         sleep 1
-        echo -ne '=========         (60%)\r'
+        echo -ne '=================         (60%)\r'
         find Download/ -name '*AntiCheat*.ini' -exec cp "{}" Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Config/  \;
         find Download/ -name '*Server*.json' -exec cp "{}" Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Config/  \;
         find Download/ -name '*UserUAE*.ini' -exec cp "{}" Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Config/  \;
         find Download/ -name '*BaseDeviceProfiles*.json' -exec cp "{}" Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Config/  \;
         sleep 1
-        echo -ne '===========     (80%)\r'
+        echo -ne '=====================     (80%)\r'
         sleep 1
-        echo -ne '=============   (100%)\r'
+        echo -ne '======================   (100%)\r'
         echo -ne '\n'
         find Download/ -name '*Suppression*.ini' -exec cp "{}" Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Config/  \;
         find Download/ -name '*AntiCheat*.json' -exec cp "{}" Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Config/  \;
@@ -286,16 +283,16 @@ echo "pemasangan userScalability dimulai"
 if [[ $(find Download/. -name '*Scalability*.ini') ]]; 
 then
     echo "file Scalability ditemukan saatnya memasang..."
-    echo -ne '=====                   (25%)\r'
+    echo -ne '=======                   (25%)\r'
     sleep 1
-    echo -ne '=========              (40%)\r'
+    echo -ne '============              (40%)\r'
     sleep 1
-    echo -ne '=============         (60%)\r'
+    echo -ne '=================         (60%)\r'
     sleep 1
-    echo -ne '================     (80%)\r'
+    echo -ne '=====================     (80%)\r'
     find Download/ -name '*Scalability*.ini' -exec cp "{}" Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Config/  \;
     sleep 1
-    echo -ne '==================   (100%)\r'
+    echo -ne '======================   (100%)\r'
     echo -ne '\n'
     echo "Scalability telah terpasang"
     sleep 5
