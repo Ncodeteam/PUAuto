@@ -95,49 +95,56 @@ find Android/data -depth -name "*cache*" -type d -exec rm -rf "{}" \;
 echo "membersihkan telegram"
 
 #original telegram cleaner
-rm -f Telegram/*.apk
-rm -f Telegram/*.mp4
-rm -f Telegram/*.jpg
-rm -f Telegram/*.oga
-rm -f Telegram/*.pdf
-rm -f Telegram/*.flac
-rm -f Telegram/*.ehi
-rm -f Telegram/*.txt
-rm -f Telegram/*.png
-rm -f Telegram/*.sh
-rm -f Telegram/*.zip
-rm -f Telegram/*.mp3
+find Telegram/ -type f -name "*.apk" -exec rm -f {} \; 2>/dev/null
+find Telegram/ -type f -name "*.apk" -exec rm -f {} \; 2>/dev/null
+find Telegram/ -type f -name "*.mp4" -exec rm -f {} \; 2>/dev/null
+find Telegram/ -type f -name "*.jpg" -exec rm -f {} \; 2>/dev/null
+find Telegram/ -type f -name "*.oga" -exec rm -f {} \; 2>/dev/null
+find Telegram/ -type f -name "*.pdf" -exec rm -f {} \; 2>/dev/null
+find Telegram/ -type f -name "*.7zip" -exec rm -f {} \; 2>/dev/null
+find Telegram/ -type f -name "*.m4a" -exec rm -f {} \; 2>/dev/null
+find Telegram/ -type f -name "*.rar" -exec rm -f {} \; 2>/dev/null
+find Telegram/ -type f -name "*.flac" -exec rm -f {} \; 2>/dev/null
+find Telegram/ -type f -name "*.txt" -exec rm -f {} \; 2>/dev/null
+find Telegram/ -type f -name "*.png" -exec rm -f {} \; 2>/dev/null
+find Telegram/ -type f -name "*.sh" -exec rm -f {} \; 2>/dev/null
+find Telegram/ -type f -name "*.zip" -exec rm -f {} \; 2>/dev/null
+find Telegram/ -type f -name "*.mp3" -exec rm -f {} \; 2>/dev/null
 rm -rf Android/data/org.telegram.messenger/cache 2>/dev/null
 
 #neko X 
-rm -rf Android/data/nekox.messanger/files/caches 2>/dev/null
-rm -f Android/data/nekox.messanger/files/*.apk
-rm -f Android/data/nekox.messanger/files/*.mp4
-rm -f Android/data/nekox.messanger/files/*.ehi
-rm -f Android/data/nekox.messanger/files/*.jpg
-rm -f Android/data/nekox.messanger/files/*.oga
-rm -f Android/data/nekox.messanger/files/*.pdf
-rm -f Android/data/nekox.messanger/files/*.flac
-rm -f Android/data/nekox.messanger/files/*.txt
-rm -f Android/data/nekox.messanger/files/*.png
-rm -f Android/data/nekox.messanger/files/*.sh
-rm -f Android/data/nekox.messanger/files/*.zip
-rm -f Android/data/nekox.messanger/files/*.mp3
+rm -rf Android/data/nekox.messenger/files/caches 2>/dev/null
+find Android/data/nekox.messenger/files -type f -name "*.apk" -exec rm -f {} \; 2>/dev/null
+find Android/data/nekox.messenger/files -type f -name "*.mp4" -exec rm -f {} \; 2>/dev/null
+find Android/data/nekox.messenger/files -type f -name "*.MP4" -exec rm -f {} \; 2>/dev/null
+find Android/data/nekox.messenger/files -type f -name "*.jpg" -exec rm -f {} \; 2>/dev/null
+find Android/data/nekox.messenger/files -type f -name "*.oga" -exec rm -f {} \; 2>/dev/null
+find Android/data/nekox.messenger/files -type f -name "*.rar" -exec rm -f {} \; 2>/dev/null
+find Android/data/nekox.messenger/files -type f -name "*.7zip" -exec rm -f {} \; 2>/dev/null
+find Android/data/nekox.messenger/files -type f -name "*.m4a" -exec rm -f {} \; 2>/dev/null
+find Android/data/nekox.messenger/files -type f -name "*.pdf" -exec rm -f {} \; 2>/dev/null
+find Android/data/nekox.messenger/files -type f -name "*.flac" -exec rm -f {} \; 2>/dev/null
+find Android/data/nekox.messenger/files -type f -name "*.txt" -exec rm -f {} \; 2>/dev/null
+find Android/data/nekox.messenger/files -type f -name "*.png" -exec rm -f {} \; 2>/dev/null
+find Android/data/nekox.messenger/files -type f -name "*.sh" -exec rm -f {} \; 2>/dev/null
+find Android/data/nekox.messenger/files -type f -name "*.zip" -exec rm -f {} \; 2>/dev/null
+find Android/data/nekox.messenger/files -type f -name "*.mp3" -exec rm -f {} \; 2>/dev/null
 
 # telegram x cleaner
-rm -f 
-rm -f Android/data/org.thunderdog.challegram/*.apk
-rm -f Android/data/org.thunderdog.challegram/*.mp4
-rm -f Android/data/org.thunderdog.challegram/*.ehi
-rm -f Android/data/org.thunderdog.challegram/*.jpg
-rm -f Android/data/org.thunderdog.challegram/*.oga
-rm -f Android/data/org.thunderdog.challegram/*.pdf
-rm -f Android/data/org.thunderdog.challegram/*.flac
-rm -f Android/data/org.thunderdog.challegram/*.txt
-rm -f Android/data/org.thunderdog.challegram/*.png
-rm -f Android/data/org.thunderdog.challegram/*.sh
-rm -f Android/data/org.thunderdog.challegram/*.zip
-rm -f Android/data/org.thunderdog.challegram/*.mp3
+find Android/data/org.thunderdog.challegram/ -type f -name "*.apk" -exec rm -f {} \; 2>/dev/null
+find Android/data/org.thunderdog.challegram/ -type f -name "*.mp4" -exec rm -f {} \; 2>/dev/null
+find Android/data/org.thunderdog.challegram/ -type f -name "*.jpg" -exec rm -f {} \; 2>/dev/null
+find Android/data/org.thunderdog.challegram/ -type f -name "*.oga" -exec rm -f {} \; 2>/dev/null
+find Android/data/org.thunderdog.challegram/ -type f -name "*.rar" -exec rm -f {} \; 2>/dev/null
+find Android/data/org.thunderdog.challegram/ -type f -name "*.m4a" -exec rm -f {} \; 2>/dev/null
+find Android/data/org.thunderdog.challegram/ -type f -name "*.7zip" -exec rm -f {} \; 2>/dev/null
+find Android/data/org.thunderdog.challegram/ -type f -name "*.pdf" -exec rm -f {} \; 2>/dev/null
+find Android/data/org.thunderdog.challegram/ -type f -name "*.flac" -exec rm -f {} \; 2>/dev/null
+find Android/data/org.thunderdog.challegram/ -type f -name "*.txt" -exec rm -f {} \; 2>/dev/null
+find Android/data/org.thunderdog.challegram/ -type f -name "*.png" -exec rm -f {} \; 2>/dev/null
+find Android/data/org.thunderdog.challegram/ -type f -name "*.sh" -exec rm -f {} \; 2>/dev/null
+find Android/data/org.thunderdog.challegram/ -type f -name "*.zip" -exec rm -f {} \; 2>/dev/null
+find Android/data/org.thunderdog.challegram/ -type f -name "*.mp3" -exec rm -f {} \; 2>/dev/null
 rm -rf Android/data/org.thunderdog.challegram/cache 2>/dev/null
 
 # telegram X issue 
@@ -145,7 +152,7 @@ rm -rf Android/data/org.thunderdog.challegram/cache 2>/dev/null
 # so i recreate again this folder to fix that
 #added if function because it will remake the folder 
 
-if [ -d Android/data/org.thunderdog.challegram/files ];
+if [ -d Android/data/org.thunderdog.challegram/files/music ];
 then 
     echo
     else
@@ -160,7 +167,7 @@ then
 fi
 
 # if you have secoundary account telegram x
-if [ -d Android/data/org.thunderdog.challegram/files/x_account1 ];
+if [ -d Android/data/org.thunderdog.challegram/files/x_account1/music ];
 then 
     echo
     else
