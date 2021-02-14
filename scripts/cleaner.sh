@@ -26,11 +26,11 @@ rm -rf Android/data/*MusicApp*/
 
 #trash removed
 # another bug genshin so i make this to fix
-if [ -d Android/data/com.miHoYo.GenshinImpact ];
-then
-echo "skipped"
-else
-rm -rf Android/data/*mi*/
+
+# remove rm -rf mi if you want to full clean with risk
+# Your genshin impact and some etc will be deleted 
+
+# rm -rf Android/data/*mi*/ 
 rm -rf Android/data/*lenovo*/
 rm -rf Android/data/*snssdk*/
 rm -rf Android/data/*facebook*/
