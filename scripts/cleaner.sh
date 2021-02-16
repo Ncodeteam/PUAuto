@@ -40,7 +40,6 @@ rm -rf Android/data/*UCMobile*/
 rm -rf Android/data/*babe*/
 rm -rf Android/data/*group*/
 rm -rf Android/data/*care*/
-fi
 
 #testing 
 rm -rf Android/data/*Music*/
