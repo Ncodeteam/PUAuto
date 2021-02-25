@@ -1,24 +1,13 @@
 #!/bin/bash
-#Narima Script 1.8
+#Narima Script 2.0
 #changelog
 # a).just added
-
-# just a plan maybe i remove this if this script have done final version
-# a).adding support for another pubg 
-# b).added effectively usercustom.ini
-
 # just a note i not responsible if you found this script to make something illegal 
 # so don't report me as author on this script
 
 clear
-
-echo "tolong letakin script ini di /storage/emulated/0 jangan diletakin & jalankan di folder/subfolder manapun"
-echo "kalau tidak diletakan jangan salah script ini kalau misalnya gagal dalam pemasangan"
-sleep 10
-clear
-
 echo "==================================="
-echo -e "1.9 PUBG INSTALLER CONFIG & BOOSTER"
+echo -e "2.0 PUBG INSTALLER CONFIG & BOOSTER"
 echo -e "created by nekaru"
 echo -e "note : jika kamu terkena banned jangan pernah salahkan installer ini"
 echo -e "resiko ditannggung sendiri"
@@ -33,7 +22,8 @@ clear
 # cangluk
 echo -e "========================================="
 echo -e "changelog"
-echo -e "a).better bar loading"
+echo -e "a).make a efficient solution"
+echo -e "b).make new cleaning set"
 echo -e "========================================="
 sleep 5
 echo "pembersihan tingkat 1"
@@ -87,6 +77,8 @@ echo -ne '=====================     (80%)\r'
 rm -rf Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Logs
 rm -rf Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Pandora
 rm -rf Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/LightData
+rm -f Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/GameErrorNoRecords
+rm -f Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/StatEventReportedFlag 
 
 #pubg kr
 rm -rf Android/data/com.pubg.krmobile/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Logs 2>/dev/null
@@ -100,7 +92,7 @@ echo "tingkat 2 selesai"
 sleep 5
 clear
 
-# pembersihan tingkat 3 pembersihan file berbau pufferEifs
+# pembersihan tingkat 3 pembersihan file berbau pufferEifs and pandora
 echo "pembersihan tingkat 3 berisi pembersihan standar"
 echo "dan tidak terkandung banyak code dan lebih difokus kan ke pubg"
 echo "pembersihan 3 dimulai"
@@ -114,9 +106,9 @@ sleep 1
 echo -ne '================     (80%)\r'
 
 # useless script since if i activate this pubg always reload again
-#rm -rf Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/PufferEifs0
+rm -rf Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/PufferEifs0
 #rm -rf Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/PufferEifs1
-#rm -rf Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/PufferTmpDir
+rm -rf Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/PufferTmpDir
 
 #pubg kr
 rm -rf Android/data/com.pubg.krmobile/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/PufferEifs0 2>/dev/null
@@ -194,7 +186,7 @@ fi
 echo "pemasangan UserGame Dimulai"
 sleep 5
 clear
-if [[ $(find Download/. -name '*Game*.ini') ]];
+if [[ $(find / -name '*Game*.ini') ]];
 then
     echo "file usergame ditemukan saatnya memasang...."
     echo -ne '=======                   (25%)\r'
@@ -204,7 +196,7 @@ then
     echo -ne '=================         (60%)\r'
     sleep 1
     echo -ne '=====================     (80%)\r'
-    find Download/ -name '*Game*.ini' -exec cp "{}" Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Config/  \;
+    find / -name '*Game*.ini' -exec cp "{}" Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Config/  \;
     sleep 1
     echo -ne '======================   (100%)\r'
     echo -ne '\n'
@@ -218,7 +210,7 @@ then
 fi
 
 echo "pemasangan userEngine dimulai"
-if [[ $(find Download/. -name '*Engine*.ini') ]];
+if [[ $(find / -name '*Engine*.ini') ]];
 then
     echo "file engine ditemukan saatnya memasang..."
    echo -ne '=======                   (25%)\r'
@@ -228,7 +220,7 @@ then
     echo -ne '=================         (60%)\r'
     sleep 1
     echo -ne '=====================     (80%)\r'
-    find Download/ -name '*Engine*.ini' -exec cp "{}" Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Config/  \;
+    find / -name '*Engine*.ini' -exec cp "{}" Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Config/  \;
     sleep 1
     echo -ne '======================   (100%)\r'
     echo -ne '\n'
@@ -247,7 +239,7 @@ fi
 echo "pemasangan lainnnya dimulai"
 sleep 3
 clear
-if [[ $(find Download/. -name '*AntiCheat*.ini') ]];
+if [[ $(find / -name '*AntiCheat*.ini') ]];
 then
     echo "Pemasangan dimulai"
         echo -ne '=======                   (25%)\r'
@@ -255,17 +247,17 @@ then
         echo -ne '============              (40%)\r'
         sleep 1
         echo -ne '=================         (60%)\r'
-        find Download/ -name '*AntiCheat*.ini' -exec cp "{}" Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Config/  \;
-        find Download/ -name '*Server*.json' -exec cp "{}" Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Config/  \;
-        find Download/ -name '*UserUAE*.ini' -exec cp "{}" Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Config/  \;
-        find Download/ -name '*BaseDeviceProfiles*.json' -exec cp "{}" Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Config/  \;
+        find / -name '*UserAntiCheat*.ini' -exec cp "{}" Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Config/  \;
+        find / -name '*Server*.json' -exec cp "{}" Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Config/  \;
+        find / -name '*UserUAE*.ini' -exec cp "{}" Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Config/  \;
+        find Download/ -name 'BaseDeviceProfiles*.json' -exec cp "{}" Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Config/  \;
         sleep 1
         echo -ne '=====================     (80%)\r'
         sleep 1
         echo -ne '======================   (100%)\r'
         echo -ne '\n'
-        find Download/ -name '*Suppression*.ini' -exec cp "{}" Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Config/  \;
-        find Download/ -name '*AntiCheat*.json' -exec cp "{}" Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Config/  \;
+        find / -name '*UserLogSuppression*.ini' -exec cp "{}" Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Config/  \;
+        find / -name '*AntiCheat*.json' -exec cp "{}" Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Config/  \;
         echo "pemasangan selesai"
         sleep 5
         clear
