@@ -109,6 +109,7 @@ echo -ne '================     (80%)\r'
 rm -rf Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/PufferEifs0
 #rm -rf Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/PufferEifs1
 rm -rf Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/PufferTmpDir
+rm -f 
 
 #pubg kr
 rm -rf Android/data/com.pubg.krmobile/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/PufferEifs0 2>/dev/null
@@ -186,7 +187,7 @@ fi
 echo "pemasangan UserGame Dimulai"
 sleep 5
 clear
-if [[ $(find / -name '*Game*.ini') ]];
+if [[ $(find /storage/emulated/0/ -name '*Game*.ini') ]];
 then
     echo "file usergame ditemukan saatnya memasang...."
     echo -ne '=======                   (25%)\r'
@@ -196,7 +197,7 @@ then
     echo -ne '=================         (60%)\r'
     sleep 1
     echo -ne '=====================     (80%)\r'
-    find / -name '*Game*.ini' -exec cp "{}" Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Config/  \;
+    find /storage/emulated/0/ -name '*Game*.ini' -exec cp "{}" Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Config/  \;
     sleep 1
     echo -ne '======================   (100%)\r'
     echo -ne '\n'
@@ -210,7 +211,7 @@ then
 fi
 
 echo "pemasangan userEngine dimulai"
-if [[ $(find / -name '*Engine*.ini') ]];
+if [[ $(find /storage/emulated/0/ -name '*Engine*.ini') ]];
 then
     echo "file engine ditemukan saatnya memasang..."
    echo -ne '=======                   (25%)\r'
@@ -220,7 +221,7 @@ then
     echo -ne '=================         (60%)\r'
     sleep 1
     echo -ne '=====================     (80%)\r'
-    find / -name '*Engine*.ini' -exec cp "{}" Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Config/  \;
+    find /storage/emulated/0/ -name '*Engine*.ini' -exec cp "{}" Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Config/  \;
     sleep 1
     echo -ne '======================   (100%)\r'
     echo -ne '\n'
@@ -239,7 +240,7 @@ fi
 echo "pemasangan lainnnya dimulai"
 sleep 3
 clear
-if [[ $(find / -name '*AntiCheat*.ini') ]];
+if [[ $(find /storage/emulated/0/ -name '*AntiCheat*.ini') ]];
 then
     echo "Pemasangan dimulai"
         echo -ne '=======                   (25%)\r'
@@ -247,17 +248,17 @@ then
         echo -ne '============              (40%)\r'
         sleep 1
         echo -ne '=================         (60%)\r'
-        find / -name '*UserAntiCheat*.ini' -exec cp "{}" Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Config/  \;
-        find / -name '*Server*.json' -exec cp "{}" Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Config/  \;
-        find / -name '*UserUAE*.ini' -exec cp "{}" Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Config/  \;
+        find /storage/emulated/0/ -name 'UserAntiCheat*.ini' -exec cp "{}" Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Config/  \;
+        find /storage/emulated/0/ -name 'Server*.json' -exec cp "{}" Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Config/  \;
+        find /storage/emulated/0/ -name 'UserUAE*.ini' -exec cp "{}" Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Config/  \;
         find Download/ -name 'BaseDeviceProfiles*.json' -exec cp "{}" Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Config/  \;
         sleep 1
         echo -ne '=====================     (80%)\r'
         sleep 1
         echo -ne '======================   (100%)\r'
         echo -ne '\n'
-        find / -name '*UserLogSuppression*.ini' -exec cp "{}" Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Config/  \;
-        find / -name '*AntiCheat*.json' -exec cp "{}" Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Config/  \;
+        find /storage/emulated/0/ -name 'UserLogSuppression*.ini' -exec cp "{}" Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Config/  \;
+        find /storage/emulated/0/ -name 'AntiCheat*.json' -exec cp "{}" Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Config/  \;
         echo "pemasangan selesai"
         sleep 5
         clear
