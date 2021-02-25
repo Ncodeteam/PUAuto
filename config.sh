@@ -188,7 +188,7 @@ fi
 echo "pemasangan UserGame Dimulai"
 sleep 5
 clear
-if [[ $(find /storage/emulated/0/ -name '*Game*.ini') ]];
+if [[ $(find /storage/emulated/0/ -name '*UserGame*.ini') ]];
 then
     echo "file usergame ditemukan saatnya memasang...."
     echo -ne '=======                   (25%)\r'
@@ -198,7 +198,7 @@ then
     echo -ne '=================         (60%)\r'
     sleep 1
     echo -ne '=====================     (80%)\r'
-    find /storage/emulated/0/ -name '*Game*.ini' -exec cp "{}" Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Config/  \;
+    find /storage/emulated/0/ -name '*UserGame*.ini' -exec cp "{}" Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Config/  \;
     sleep 1
     echo -ne '======================   (100%)\r'
     echo -ne '\n'
@@ -212,7 +212,7 @@ then
 fi
 
 echo "pemasangan userEngine dimulai"
-if [[ $(find /storage/emulated/0/ -name '*Engine*.ini') ]];
+if [[ $(find /storage/emulated/0/ -name '*UserEngine*.ini') ]];
 then
     echo "file engine ditemukan saatnya memasang..."
    echo -ne '=======                   (25%)\r'
