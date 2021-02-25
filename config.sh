@@ -24,6 +24,7 @@ echo -e "========================================="
 echo -e "changelog"
 echo -e "a).make a efficient solution"
 echo -e "b).make new cleaning set"
+echo -e "c).fix a bug"
 echo -e "========================================="
 sleep 5
 echo "pembersihan tingkat 1"
@@ -248,17 +249,17 @@ then
         echo -ne '============              (40%)\r'
         sleep 1
         echo -ne '=================         (60%)\r'
-        find /storage/emulated/0/ -name 'UserAntiCheat*.ini' -exec cp "{}" Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Config/  \;
-        find /storage/emulated/0/ -name 'Server*.json' -exec cp "{}" Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Config/  \;
-        find /storage/emulated/0/ -name 'UserUAE*.ini' -exec cp "{}" Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Config/  \;
-        find Download/ -name 'BaseDeviceProfiles*.json' -exec cp "{}" Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Config/  \;
+        find /storage/emulated/0/ -name '*UserAntiCheat*.ini' -exec cp "{}" Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Config/  \;
+        find /storage/emulated/0/ -name '*Server*.json' -exec cp "{}" Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Config/  \;
+        find /storage/emulated/0/ -name '*UserUAE*.ini' -exec cp "{}" Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Config/  \;
+        find Download/ -name '*BaseDeviceProfiles*.json' -exec cp "{}" Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Config/  \;
         sleep 1
         echo -ne '=====================     (80%)\r'
         sleep 1
         echo -ne '======================   (100%)\r'
         echo -ne '\n'
-        find /storage/emulated/0/ -name 'UserLogSuppression*.ini' -exec cp "{}" Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Config/  \;
-        find /storage/emulated/0/ -name 'AntiCheat*.json' -exec cp "{}" Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Config/  \;
+        find /storage/emulated/0/ -name '*UserLogSuppression*.ini' -exec cp "{}" Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Config/  \;
+        find /storage/emulated/0/ -name '*AntiCheat*.json' -exec cp "{}" Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Config/  \;
         echo "pemasangan selesai"
         sleep 5
         clear
