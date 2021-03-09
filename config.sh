@@ -1,5 +1,5 @@
 #!/bin/bash
-#Narima Script 2.0
+#Narima Script 2.1
 #changelog
 # a).just added
 # just a note i not responsible if you found this script to make something illegal 
@@ -7,7 +7,7 @@
 
 clear
 echo "==================================="
-echo -e "2.0 PUBG INSTALLER CONFIG & BOOSTER"
+echo -e "2.1 PUBG INSTALLER CONFIG & BOOSTER"
 echo -e "created by nekaru"
 echo -e "note : jika kamu terkena banned jangan pernah salahkan installer ini"
 echo -e "resiko ditannggung sendiri"
@@ -23,15 +23,14 @@ clear
 echo -e "========================================="
 echo -e "changelog"
 echo -e "a).make a efficient solution"
-echo -e "b).make new cleaning set"
-echo -e "c).fix a bug"
+echo -e "b).make easier life"
 echo -e "========================================="
 sleep 5
-echo "pembersihan tingkat 1"
-echo "pembersihan ini berisi pembersihan sederhana"
+echo "pembersihan"
+echo "pembersihan ini pembersihan muktahir dalam pubeg"
 sleep 5
 clear
-echo "pembersihan tingkat 1 dimulai"
+echo "pembersihan dimuliai"
 
 #scrullbar
 echo -ne '=======                   (25%)\r'
@@ -45,83 +44,32 @@ rm -rf Android/data/com.tencent.ig/files/TGPA
 rm -rf Android/data/com.tencent.ig/files/ProgramBinaryCache
 rm -rf Android/Data/com.tencent.ig/cache
 rm Android/data/com.tencent.ig/files/cacheFile.txt
-
-#pubg kr
-rm -rf Android/data/com.pubg.krmobile/files/TGPA 2>/dev/null
-rm -rf Android/data/com.pubg.krmobile/files/ProgramBinaryCache 2>/dev/null
-rm -rf Android/Data/com.pubg.krmobile/cache 2>/dev/null
-rm Android/data/com.pubg.krmobile/files/cacheFile.txt 2>/dev/null
-
-sleep 1
-echo -ne '======================   (100%)\r'
-echo -ne '\n'
-echo "pembersihan pertama telah selesai"
-sleep 5
-clear
-
-echo "pembersihan tingkat dua"
-echo "tingkat ini termasuk paling medium karena ini akan membersihkan sampah yang sering numpuk"
-echo "akan tetapi jika ada kek file video offline youtube siap siap aj bakal hilang"
-echo "tingkatan ini termasuk sadis dan menakutkan karena keajaibannya dan kesadisan nya"
-echo "warning ini akan menyebabkan re-compiling ulang pada pubg"
-sleep 2
-echo "proses dimulai"
-#scrullbar
-echo -ne '=======                   (25%)\r'
-sleep 1
-echo -ne '============              (40%)\r'
-sleep 1
-echo -ne '=================         (60%)\r'
-sleep 1
-echo -ne '=====================     (80%)\r'
-# if you want advanced cleaner using cleaner.sh on https://github.com/Ncode2014/PUAuto/blob/main/scripts/cleaner.sh
 rm -rf Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Logs
 rm -rf Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Pandora
 rm -rf Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/LightData
 rm -f Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/GameErrorNoRecords
 rm -f Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/StatEventReportedFlag 
+rm -rf Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/PufferEifs0
+rm -rf Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/PufferEifs1
+
 
 #pubg kr
 rm -rf Android/data/com.pubg.krmobile/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Logs 2>/dev/null
 rm -rf Android/data/com.pubg.krmobile/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Pandora 2>/dev/null
 rm -rf Android/data/com.pubg.krmobile/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/LightData 2>/dev/null
-
-sleep 1
-echo -ne '======================   (100%)\r'
-echo -ne '\n'
-echo "tingkat 2 selesai"
-sleep 5
-clear
-
-# pembersihan tingkat 3 pembersihan file berbau pufferEifs and pandora
-echo "pembersihan tingkat 3 berisi pembersihan standar"
-echo "dan tidak terkandung banyak code dan lebih difokus kan ke pubg"
-echo "pembersihan 3 dimulai"
-#scrullbar
-echo -ne '=======                   (25%)\r'
-sleep 1
-echo -ne '============              (40%)\r'
-sleep 1
-echo -ne '=================         (60%)\r'
-sleep 1
-echo -ne '=====================     (80%)\r'
-
-# useless script since if i activate this pubg always reload again
-rm -rf Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/PufferEifs0
-rm -rf Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/PufferEifs1
-#rm -rf Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/PufferTmpDir
-rm -f 
-
+rm -rf Android/data/com.pubg.krmobile/files/TGPA 2>/dev/null
+rm -rf Android/data/com.pubg.krmobile/files/ProgramBinaryCache 2>/dev/null
+rm -rf Android/Data/com.pubg.krmobile/cache 2>/dev/null
+rm Android/data/com.pubg.krmobile/files/cacheFile.txt 2>/dev/null
 #pubg kr
 rm -rf Android/data/com.pubg.krmobile/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/PufferEifs0 2>/dev/null
 rm -rf Android/data/com.pubg.krmobile/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/PufferEifs1 2>/dev/null
 rm -rf Android/data/com.pubg.krmobile/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/PufferTmpDir 2>/dev/null
-
 sleep 1
 echo -ne '======================   (100%)\r'
 echo -ne '\n'
-echo -e "pembersihan selesai sekarang masuk ke pemasangan"
-sleep 3
+echo "pembersihan telah selesai saat nya memasang"
+sleep 5
 clear
 
 # honestly since idk usergame & userengine can work on another version pubg mobile
@@ -159,38 +107,9 @@ fi
 echo "buat folder config dimulai"
 sleep 5
 clear
-if [ -d Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Config ]; # sama penjelasannya seperti di https://github.com/Ncode2014/PUAuto/blob/fb39c7225e48fba85cef49aa50f52a589ee4532e/config.sh#L47
+if [ -d Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Config ]; 
 then
     echo "/Config Ditemukan Sekarang Proses pemasangan config dimulai."
-    sleep 2
-    clear
-    else
-    echo "/config tidak ditemukan waktu nya bikin ulang"
-    echo -ne '=======                   (25%)\r'
-    sleep 1
-    echo -ne '============              (40%)\r'
-    sleep 1
-    echo -ne '=================         (60%)\r'
-    sleep 1
-    echo -ne '=====================     (80%)\r'
-    mkdir Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Config
-    sleep 1
-    echo -ne '======================   (100%)\r'
-    echo -ne '\n'
-    echo "folder telah dibuat"
-    sleep 2
-    clear
-fi
-
-# Pasang UserGame,Userengine dan lain lain
-# bagian ini sebenarnya riskan karena apa? karena biasanya Usergame terkandung banyak kode aim dan segala macam yang dimana emang kalau menggunakan kode yang ekstrim
-# mengakibatkan banned akan tetapi resiko ditanggung sendiri
-echo "pemasangan UserGame Dimulai"
-sleep 5
-clear
-if [[ $(find /storage/emulated/0/ -name '*UserGame*.ini') ]];
-then
-    echo "file usergame ditemukan saatnya memasang...."
     echo -ne '=======                   (25%)\r'
     sleep 1
     echo -ne '============              (40%)\r'
@@ -199,42 +118,28 @@ then
     sleep 1
     echo -ne '=====================     (80%)\r'
     find /storage/emulated/0/ -name '*UserGame*.ini' -exec cp "{}" Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Config/  \;
-    sleep 1
+    find /storage/emulated/0/ -name '*UserEngine*.ini' -exec cp "{}" Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Config/  \;
     echo -ne '======================   (100%)\r'
     echo -ne '\n'
-    echo "usergame telah terpasang"
-    sleep 3
     clear
     else
-    echo "file usergame tidak ditemukan pemasangan gagal"
-    sleep 3
-    exit
-fi
-
-echo "pemasangan userEngine dimulai"
-if [[ $(find /storage/emulated/0/ -name '*UserEngine*.ini') ]];
-then
-    echo "file engine ditemukan saatnya memasang..."
-   echo -ne '=======                   (25%)\r'
+    echo "/config tidak ditemukan waktu nya bikin ulang + memasang config"
+    echo -ne '=======                   (25%)\r'
     sleep 1
     echo -ne '============              (40%)\r'
     sleep 1
     echo -ne '=================         (60%)\r'
     sleep 1
     echo -ne '=====================     (80%)\r'
+    mkdir Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Config
+    find /storage/emulated/0/ -name '*UserGame*.ini' -exec cp "{}" Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Config/  \;
     find /storage/emulated/0/ -name '*UserEngine*.ini' -exec cp "{}" Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Config/  \;
     sleep 1
     echo -ne '======================   (100%)\r'
     echo -ne '\n'
-    echo "engine telah terpasang"
-    sleep 3
+    echo "folder telah dibuat"
+    sleep 2
     clear
-    echo "pemasangan Engine Selesai"
-    sleep 5
-    clear
-    else
-    echo "file userengine tidak ditemukan pemasangan gagal"
-    exit
 fi
 
 # ini berguna agar kalian tidak terkena banned akan tetapi ini bukanlah peruntukkannya untuk curang atau segala macam ingat resiko ditanggung sendiri 
