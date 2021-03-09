@@ -98,18 +98,18 @@ echo "pembersihan tingkat 3 berisi pembersihan standar"
 echo "dan tidak terkandung banyak code dan lebih difokus kan ke pubg"
 echo "pembersihan 3 dimulai"
 #scrullbar
-echo -ne '=====                   (25%)\r'
+echo -ne '=======                   (25%)\r'
 sleep 1
-echo -ne '=========              (40%)\r'
+echo -ne '============              (40%)\r'
 sleep 1
-echo -ne '=============         (60%)\r'
+echo -ne '=================         (60%)\r'
 sleep 1
-echo -ne '================     (80%)\r'
+echo -ne '=====================     (80%)\r'
 
 # useless script since if i activate this pubg always reload again
 rm -rf Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/PufferEifs0
-#rm -rf Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/PufferEifs1
-rm -rf Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/PufferTmpDir
+rm -rf Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/PufferEifs1
+#rm -rf Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/PufferTmpDir
 rm -f 
 
 #pubg kr
@@ -118,7 +118,7 @@ rm -rf Android/data/com.pubg.krmobile/files/UE4Game/ShadowTrackerExtra/ShadowTra
 rm -rf Android/data/com.pubg.krmobile/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/PufferTmpDir 2>/dev/null
 
 sleep 1
-echo -ne '==================   (100%)\r'
+echo -ne '======================   (100%)\r'
 echo -ne '\n'
 echo -e "pembersihan selesai sekarang masuk ke pemasangan"
 sleep 3
@@ -136,16 +136,16 @@ if [ -d Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrack
 then
      echo "folder ditemukan saat nya dihapus"
      #scrullbar
-     echo -ne '=====                   (25%)\r'
+     echo -ne '=======                   (25%)\r'
      sleep 1
-     echo -ne '=========              (40%)\r'
+     echo -ne '============              (40%)\r'
      sleep 1
-     echo -ne '=============         (60%)\r'
+     echo -ne '=================         (60%)\r'
      sleep 1
-     echo -ne '================     (80%)\r'
+     echo -ne '=====================     (80%)\r'
      rm -rf Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Config # menghapusnya
      sleep 1
-     echo -ne '==================   (100%)\r'
+     echo -ne '======================   (100%)\r'
      echo -ne '\n'
      echo "folder telah terhapus saatnya membuat ulang"
      sleep 3
@@ -222,7 +222,7 @@ then
     echo -ne '=================         (60%)\r'
     sleep 1
     echo -ne '=====================     (80%)\r'
-    find /storage/emulated/0/ -name '*Engine*.ini' -exec cp "{}" Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Config/  \;
+    find /storage/emulated/0/ -name '*UserEngine*.ini' -exec cp "{}" Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Config/  \;
     sleep 1
     echo -ne '======================   (100%)\r'
     echo -ne '\n'
