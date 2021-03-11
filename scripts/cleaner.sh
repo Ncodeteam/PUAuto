@@ -6,49 +6,28 @@
 
 echo "cleaner berjalan......"
 
-#standar
-if [ -d mtklog ];
-then
-clear
-rm -rf mtklog 2>/dev/null
-echo "FOLDER MTK BERHASIL DIBERSIHKAN"
-fi
-
-if [ -d oppo_log ];
-then
-clear
-rm -rf oppo_log 2>/dev/null
-rm -rf ColorOS 2>/dev/null
-echo "FOLDER OPPO BERHASIL TERHAPUS"
-fi
-
-rm -rf miniplay 2>/dev/null
-rm -rf SHAREit 2>/dev/null
-rm -rf Browser 2>/dev/null
-echo "Stuff has been cleaned"
+#reworked
+find /storage/emulated/0/ -type d \( -name "*log*" -o -name "*thumbnails*" -o -name "*cache*" -o -name "*joox*" -o -name "*miniplay*" -o -name "*SHAREit*" -o -name "*Browser*" -o -name "*mtklog*" -o -name "*oppo_log*" -o -name "*ColorOS*" \) -exec rm -rf "{}" \;  2>/dev/null
 
 #vendor hape
 echo "hapus vendor folder hape"
 find Android/data -type d \( -name "*xiaomi*" -o -name "*miui*" -o -name "*nearme*" -o -name "*coloros*" -o -name "*oppo*" -o -name "*opera*" -o -name "*MusicApp*" -o -name "*google*" -o -name "*android*" -o -name "*spotify*" -o -name "*music*" -o -name "*Music*"  \) -exec rm -rf "{}" \; 2>/dev/null
 
-#trash removed
-# another bug genshin so i make this to fix
-
 # remove rm -rf mi if you want to full clean with risk
 # Your genshin impact and some etc will be deleted 
 
 # rm -rf Android/data/*mi*/ 
-find Android/data -type d \( -name "*lenovo*" -o -name "*snssdk*" -o -name "*facebook*" -o -name "*mind*" -o -name "*UCMobile*" -o -name "*babe*" -o -name "*group*" -o -name "*care*" \) -exec rm -rf "{}" \; 2>/dev/null
 
-#music cache folder
-echo "hapus folder cache folder"
-rm -rf *joox*/
+find Android/data -type d \( -name "*lenovo*" -o -name "*snssdk*" -o -name "*facebook*" -o -name "*mind*" -o -name "*UCMobile*" -o -name "*babe*" -o -name "*group*" -o -name "*care*" -o -name "*cache*" \) -exec rm -rf "{}" \; 2>/dev/null
 
 # khusus whatsapp
 echo "hapus whatsapp useless folder"
 find /storage/emulated/0/WhatsApp/ -type d \( -name "*Shared*" -o -name "*Thumbs*" -o -name "*trash*" -o -name "*Backups*" -o -name "*Backups*" -o -name "*Databases*" \) -exec rm -rf "{}" \; 2>/dev/null
 echo "moar cleaning unecessery"
 
+#####################################################
+############ O L D S T U F F START #####################
+######################################################
 # delete file kosong
 find Android/ -depth -type d -empty -exec rmdir {} \;
 find . -depth -type d -empty -exec rmdir {} \;
@@ -58,7 +37,6 @@ find . -depth -type d -empty -exec rmdir {} \;
 find . -type d -depth -exec rmdir {} + 2>/dev/null
 
 #log & more
-find . -depth -name "*log*" -type d -exec rm -rf "{}" \;
 find . -type f -name "*iacovnfld*" -exec rm -f {} \;
 find . -type f -name "*.log" -exec rm -f {} \;
 
@@ -66,16 +44,12 @@ find . -type f -name "*.log" -exec rm -f {} \;
 # due to privacy issue i removed
 # find . -type f -name "*nomedia*" -exec rm -f {} \;
 
-#thumbnail cleaner
-find . -depth -name "*thumbnails*" -type d -exec rm -rf {} \;
-
-
 # penghapusan apk biar gk numpuk
 find . -type f -name "*.apk" -exec rm -f {} \;
-
-#some function
-find Android/data -depth -name "*cache*" -type d -exec rm -rf "{}" \; 
-
+ 
+######################################################
+#================= O L D S T U F F END =====================#
+######################################################
 echo "membersihkan telegram"
 
 # simple telegram
@@ -94,14 +68,9 @@ rm -rf Android/data/org.thunderdog.challegram/cache 2>/dev/null
 # some yeah for MIUI
 rm dctp 2>/dev/null
 rm did 2>/dev/null
-rm -rf /sdcard/MIUI/debug_log 2>/dev/null
 
-if [[ -d MIUI/theme ]];
-then
-     echo "cannot removed"
-     else
-     rm -rf MIUI/
-fi
+#miui simple advanced way
+find /storage/emulated/0/MIUI/ -type d \( -name "*debug_log*" -o -name "*config*" -o -name "*Gallery*" -o -name "*snapshot*" -o -name "*cache*" \) -exec rm -rf "{}" \; 2>/dev/null
 
 # root side 
 # please running on root access
