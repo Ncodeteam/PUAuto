@@ -91,40 +91,6 @@ find Android/data/nekox.messenger/files -type f \( -iname \*.jpg -o -iname \*.pn
 find Android/data/org.thunderdog.challegram/ -type f \( -iname \*.jpg -o -iname \*.png -o -iname \*.apk -o -iname \*.mp4 -o -iname \*.oga -o -iname \*.pdf -o -iname \*.7zip -o -iname \*.m4a -o -iname \*.rar -o -iname \*.flac -o -iname \*.txt -o -iname \*.sh -o -iname \*.zip -o -iname \*.mp3 \) -exec rm -f {} \; 2>/dev/null
 rm -rf Android/data/org.thunderdog.challegram/cache 2>/dev/null 
 
-# telegram X issue 
-# i found this issue when i workaround this script
-# so i recreate again this folder to fix that
-#added if function because it will remake the folder 
-
-if [ -d Android/data/org.thunderdog.challegram/files/music ];
-then 
-    echo
-    else
-    mkdir Android/data/org.thunderdog.challegram/files/animations 2>/dev/null
-    mkdir Android/data/org.thunderdog.challegram/files/documents 2>/dev/null
-    mkdir Android/data/org.thunderdog.challegram/files/music 2>/dev/null
-    mkdir Android/data/org.thunderdog.challegram/files/photos 2>/dev/null
-    mkdir Android/data/org.thunderdog.challegram/files/temp 2>/dev/null
-    mkdir Android/data/org.thunderdog.challegram/files/video_notes 2>/dev/null
-    mkdir Android/data/org.thunderdog.challegram/files/videos 2>/dev/null
-    mkdir Android/data/org.thunderdog.challegram/files/voice 2>/dev/null
-fi
-
-# if you have secoundary account telegram x
-if [ -d Android/data/org.thunderdog.challegram/files/x_account1/music ];
-then 
-    echo
-    else
-    mkdir Android/data/org.thunderdog.challegram/files/x_account1/animations 2>/dev/null
-    mkdir Android/data/org.thunderdog.challegram/files/x_account1/documents 2>/dev/null
-    mkdir Android/data/org.thunderdog.challegram/files/x_account1/music 2>/dev/null
-    mkdir Android/data/org.thunderdog.challegram/files/x_account1/photos 2>/dev/null
-    mkdir Android/data/org.thunderdog.challegram/files/x_account1/temp 2>/dev/null
-    mkdir Android/data/org.thunderdog.challegram/files/x_account1/video_notes 2>/dev/null
-    mkdir Android/data/org.thunderdog.challegram/files/x_account1/videos 2>/dev/null
-    mkdir Android/data/org.thunderdog.challegram/files/x_account1/voice 2>/dev/null
-fi
-
 # some yeah for MIUI
 rm dctp 2>/dev/null
 rm did 2>/dev/null
