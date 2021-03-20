@@ -9,6 +9,11 @@ echo "cleaner berjalan......"
 #reworked
 find /storage/emulated/0/ -type d \( -name "*log*" -o -name "*thumbnails*" -o -name "*cache*" -o -name "*joox*" -o -name "*miniplay*" -o -name "*SHAREit*" -o -name "*Browser*" -o -name "*mtklog*" -o -name "*oppo_log*" -o -name "*ColorOS*" \) -exec rm -rf "{}" \;  2>/dev/null
 
+#remake 
+find /storage/emulated/0/ -type f \( -iname \*.log -o -iname \*.CHK -o -iname \*.bak \) -exec rm -f {} \; 2>/dev/null
+
+find /storage/emulated/0/ -type d \( -name "*LOST.DIR*" -o -name "*found000*" -o -name "*albumthumbs*" -o -name "*Backucup*" -o -name "*wlan_logs*" -o -name "*ramdump*" -o -name "*UnityAdsVideoCache*" -o -name "*shading_otp*"  \) -exec rm -rf "{}" \; 2>/dev/null
+
 #vendor hape
 echo "hapus vendor folder hape"
 find Android/data -type d \( -name "*xiaomi*" -o -name "*miui*" -o -name "*nearme*" -o -name "*coloros*" -o -name "*oppo*" -o -name "*opera*" -o -name "*MusicApp*" -o -name "*google*" -o -name "*android*" -o -name "*spotify*" -o -name "*music*" -o -name "*Music*"  \) -exec rm -rf "{}" \; 2>/dev/null
@@ -129,33 +134,15 @@ fstrim -v /system 2>/dev/null
 fstrim -v /vendor 2>/dev/null
 fstrim -v /product 2>/dev/null
 
-# sdcard stuff
-if [ -d /sdcard ];
-then
-rm -rf /sdcard/LOST.DIR 2>/dev/null
-rm -rf /sdcard/found000 2>/dev/null
-rm -rf /sdcard/albumthumbs 2>/dev/null
-rm -rf /sdcard/.CacheOfEUI 2>/dev/null
-rm -rf /sdcard/.bstats 2>/dev/null
-rm -rf /sdcard/.taobao 2>/dev/null
-rm -rf /sdcard/Backucup 2>/dev/null
-rm -rf /sdcard/wlan_logs 2>/dev/null
-rm -rf /sdcard/ramdump 2>/dev/null
-rm -rf /sdcard/UnityAdsVideoCache
-rm -f /sdcard/*.log 2>/dev/null
-rm -f /sdcard/*.CHK 2>/dev/null
-rm -rf /sdcard/LOST.DIR 2>/dev/null
-rm -rf /sdcard/found000 2>/dev/null
-rm -rf /sdcard/albumthumbs 2>/dev/null
-rm -rf /sdcard/.CacheOfEUI 2>/dev/null
-rm -rf /sdcard/.bstats 2>/dev/null
-rm -rf /sdcard/.taobao 2>/dev/null
-rm -rf /sdcard/Backucup 2>/dev/null
-rm -rf /sdcard/wlan_logs 2>/dev/null
-rm -rf /sdcard/ramdump 2>/dev/null
-rm -rf /sdcard/UnityAdsVideoCache 2>/dev/null
-rm -f /sdcard/*.CHK 2>/dev/null
-fi
+# reworked
+rm -rf /storage/emulated/0/.CacheOfEUI 2>/dev/null
+rm -rf /storage/emulated/0/.bstats 2>/dev/null
+rm -rf /storage/emulated/0/.taobao 2>/dev/null
+rm -rf /storage/emulated/0/.CacheOfEUI 2>/dev/null
+rm -rf /storage/emulated/0/.bstats 2>/dev/null
+rm -rf /storage/emulated/0/.taobao 2>/dev/null
+rm -rf /storage/emulated/0/.um 2>/dev/null
+rm -rf /storage/emulated/0/.uxx 2>/dev/null
 
 # my friend has reported some annoying folder call "browsermetrics"
 # so i make it to force to delete them
