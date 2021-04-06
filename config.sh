@@ -1,15 +1,16 @@
 #!/bin/bash
-#Narima Script 99.99
+#Narima Script 2.3
 #changelog
 # a).just added
-# just a note i not responsible if you found this script to make something illegal 
+# just a note i not responsible if you found this script to make something illegal
 # so don't report me as author on this script
 
 clear
 echo "==================================="
-echo -e "2.2 PUBG INSTALLER CONFIG & BOOSTER"
+echo -e "2.3 PUBG INSTALLER CONFIG & BOOSTER"
 echo -e "created by nekaru"
-echo -e "last version"
+echo -e "note : jika kamu terkena banned jangan pernah salahkan installer ini"
+echo -e "resiko ditannggung sendiri"
 echo "==================================="
 sleep 5
 echo "menuju tkp"
@@ -19,9 +20,8 @@ clear
 # cangluk
 echo -e "========================================="
 echo -e "changelog"
-echo -e "a).make a efficient solution"
-echo -e "b).make easier life"
-echo -e "c).disable function since 1.3 pubg already no longer work"
+echo -e "a).Reworked Script to activate again"
+echo -e "b).Make a easier method"
 echo -e "========================================="
 sleep 5
 echo "pembersihan"
@@ -38,61 +38,29 @@ sleep 1
 echo -ne '=================         (60%)\r'
 sleep 1
 echo -ne '=====================     (80%)\r'
-rm -rf Android/data/com.tencent.ig/files/TGPA
-rm -rf Android/data/com.tencent.ig/files/ProgramBinaryCache
-rm -rf Android/Data/com.tencent.ig/cache
-rm Android/data/com.tencent.ig/files/cacheFile.txt
-rm -rf Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Logs
-rm -rf Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Pandora
-rm -rf Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/LightData
-rm -f Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/GameErrorNoRecords
-rm -f Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/StatEventReportedFlag 
-rm -rf Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/PufferEifs0
-rm -rf Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/PufferEifs1
+# reworked engine bash for pubg mobile global and korean
+find /storage/emulated/0/Android/data/com.tencent.ig -type d \( -name "*TGPA*" -o -name "*ProgramBinaryCache*" -o -name "*cache*" -o -name "*Logs*" -o -name "*Pandora*" -o -name "*LightData*" -o -name "*GameErrorNoRecords*" -o -name "*StatEventReportedFlag*" -o -name "*PufferEifs0*" -o -name "*PufferEifs1*" \) -exec rm -rf "{}" \;  2>/dev/null
+rm Android/data/com.tencent.ig/files/cacheFile.txt 2>/dev/null
 
-
-#pubg kr
-rm -rf Android/data/com.pubg.krmobile/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Logs 2>/dev/null
-rm -rf Android/data/com.pubg.krmobile/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Pandora 2>/dev/null
-rm -rf Android/data/com.pubg.krmobile/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/LightData 2>/dev/null
-rm -rf Android/data/com.pubg.krmobile/files/TGPA 2>/dev/null
-rm -rf Android/data/com.pubg.krmobile/files/ProgramBinaryCache 2>/dev/null
-rm -rf Android/Data/com.pubg.krmobile/cache 2>/dev/null
+find /storage/emulated/0/Android/data/com.pubg.krmobile -type d \( -name "*TGPA*" -o -name "*ProgramBinaryCache*" -o -name "*cache*" -o -name "*Logs*" -o -name "*Pandora*" -o -name "*LightData*" -o -name "*GameErrorNoRecords*" -o -name "*StatEventReportedFlag*" -o -name "*PufferEifs0*" -o -name "*PufferEifs1*" \) -exec rm -rf "{}" \;  2>/dev/null
 rm Android/data/com.pubg.krmobile/files/cacheFile.txt 2>/dev/null
-#pubg kr
-rm -rf Android/data/com.pubg.krmobile/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/PufferEifs0 2>/dev/null
-rm -rf Android/data/com.pubg.krmobile/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/PufferEifs1 2>/dev/null
-rm -rf Android/data/com.pubg.krmobile/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/PufferTmpDir 2>/dev/null
 sleep 1
 echo -ne '======================   (100%)\r'
 echo -ne '\n'
-echo "pembersihan telah selesai"
+echo "pembersihan telah selesai saat nya memasang"
 sleep 5
 clear
 
-# destroy pubg config folder
-# why i destroy since 1.3 pubg no longer work then why i maintained this script again
-sleep 5
-clear
-if [ -d Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Config ]; # mencari folder 
+
+# reworked for pak and enjoy
+
+# installer simple for pubg since i dont want any complex INSTALLER
+if [-d Android/data/com.tencent.ig ];
 then
-     echo "folder ditemukan saat nya dihapus"
-     #scrullbar
-     echo -ne '=======                   (25%)\r'
-     sleep 1
-     echo -ne '============              (40%)\r'
-     sleep 1
-     echo -ne '=================         (60%)\r'
-     sleep 1
-     echo -ne '=====================     (80%)\r'
-     rm -rf Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Config # menghapusnya
-     sleep 1
-     echo -ne '======================   (100%)\r'
-     echo -ne '\n'
-     sleep 3
-     clear
-     echo "Thx To for using this script"
-     echo "this script now only removed a Config folder since 1.3 pubg no longer work"
-     sleep 5
-     clear
+echo "installing....."
+find /storage/emulated/0/Download/ -name '*.pak' -exec cp "{}" Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Paks/ \;
+find /storage/emulated/0/ -name '*.cache' -exec cp "{}" Android/data/com.tencent.ig/files/ \;
+find /storage/emulated/0/ -name '*EnjoyCJZC*.ini' -exec cp "{}" Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Config/Android/ \;
+find /storage/emulated/0/ -name '*GameUserSettings*.ini' -exec cp "{}" Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Config/Android/ \;
+echo "done!"
 fi

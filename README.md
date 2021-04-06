@@ -1,16 +1,13 @@
 # PUAuto
-Tool Pemasang userengine dan usergame secara otomatis sekali jalan + auto cleaner
-
-
-# TRIK INI SUDAH TIDAK BEKERJA DI 1.3 PUBG MOBILE GLOBAL
+Tool Pemasang PAK dan enjoy secara otomatis sekali jalan + auto cleaner
 
 ```
-jika kamu mau nambahkan fitur apa atau gimana bisa chat dev di telegram 
+jika kamu mau nambahkan fitur apa atau gimana bisa chat dev di telegram
 ```
 
-##### Issue 
+##### Issue
 ```
-some handphone have a couple issue like find bad arg or whatever in mt manager but in terminal emulater this issue has been solve so if 
+some handphone have a couple issue like find bad arg or whatever in mt manager but in terminal emulater this issue has been solve so if
 you have issue like i said before u must using terminal emulator
 ```
 
@@ -26,8 +23,8 @@ yes this script actually tested on my phone and my brother phone, then i have no
 
 __read this__
 
-extract folder contain userengine,usergame on folder download and execute this script after that userengine succesfully install
+extract folder contain PAK and enjoy on folder download and execute this script after that PAK and enjoy succesfully install
 
-### READ THIS EVERYONE 
+### READ THIS EVERYONE
 I as a script creator prohibits this script from being commercially made and bought and sold right
 This script is for education only and is not made for illegal things.
