@@ -62,11 +62,11 @@ clear
 if [-d $PUBGD ];
 then
 echo "installing....."
-find $DOWN -name '*.pak' -exec cp "{}" Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Paks/ \;
-find $NORMAL -name '*.cache' -exec cp "{}" Android/data/com.tencent.ig/files/ \;
-find $NORMAL -name '*EnjoyCJZC*.ini' -exec cp "{}" Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Config/Android/ \;
-find $NORMAL -name '*GameUserSettings*.ini' -exec cp "{}" Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Config/Android/ \;
-find $DOWN -name '*.sav' -exec cp "{}" Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/
+find $DOWN -name '*.pak' -exec cp -r "{}" Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Paks/ \;
+find $NORMAL -name '*.cache' -exec cp -r "{}" Android/data/com.tencent.ig/files/ \;
+find $NORMAL -name '*EnjoyCJZC*.ini' -exec cp -r "{}" Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Config/Android/ \;
+find $NORMAL -name '*GameUserSettings*.ini' -exec cp -r "{}" Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Config/Android/ \;
+find $DOWN -name '*.sav' -exec cp -r "{}" Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/
 echo "done!"
 else
 echo "some file maybe lost but if you dont know about that ignore this message"
