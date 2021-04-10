@@ -1,15 +1,15 @@
-#!/bin/bash 
+#!/bin/bash
 #forked from PUAuto
 
 #for fix some annoying
-#pembersih 
+#pembersih
 
 echo "cleaner berjalan......"
 
 #reworked
-find /storage/emulated/0/ -type d \( -name "*log*" -o -name "*thumbnails*" -o -name "*cache*" -o -name "*joox*" -o -name "*miniplay*" -o -name "*SHAREit*" -o -name "*Browser*" -o -name "*mtklog*" -o -name "*oppo_log*" -o -name "*ColorOS*" \) -exec rm -rf "{}" \;  2>/dev/null
+find /storage/emulated/0/ -type d \( -name "*log*" -o -name "*thumbnails*" -o -name "*joox*" -o -name "*miniplay*" -o -name "*SHAREit*" -o -name "*Browser*" -o -name "*mtklog*" -o -name "*oppo_log*" -o -name "*ColorOS*" \) -exec rm -rf "{}" \;  2>/dev/null
 
-#remake 
+#remake
 find /storage/emulated/0/ -type f \( -iname \*.log -o -iname \*.CHK -o -iname \*.bak \) -exec rm -f {} \; 2>/dev/null
 
 find /storage/emulated/0/ -type d \( -name "*LOST.DIR*" -o -name "*found000*" -o -name "*albumthumbs*" -o -name "*Backucup*" -o -name "*wlan_logs*" -o -name "*ramdump*" -o -name "*UnityAdsVideoCache*" -o -name "*shading_otp*"  \) -exec rm -rf "{}" \; 2>/dev/null
@@ -19,11 +19,11 @@ echo "hapus vendor folder hape"
 find Android/data -type d \( -name "*xiaomi*" -o -name "*miui*" -o -name "*nearme*" -o -name "*coloros*" -o -name "*oppo*" -o -name "*opera*" -o -name "*MusicApp*" -o -name "*google*" -o -name "*android*" -o -name "*spotify*" -o -name "*music*" -o -name "*Music*"  \) -exec rm -rf "{}" \; 2>/dev/null
 
 # remove rm -rf mi if you want to full clean with risk
-# Your genshin impact and some etc will be deleted 
+# Your genshin impact and some etc will be deleted
 
-# rm -rf Android/data/*mi*/ 
+# rm -rf Android/data/*mi*/
 
-find Android/data -type d \( -name "*lenovo*" -o -name "*snssdk*" -o -name "*facebook*" -o -name "*mind*" -o -name "*UCMobile*" -o -name "*babe*" -o -name "*group*" -o -name "*care*" -o -name "*cache*" \) -exec rm -rf "{}" \; 2>/dev/null
+find Android/data -type d \( -name "*lenovo*" -o -name "*snssdk*" -o -name "*facebook*" -o -name "*mind*" -o -name "*UCMobile*" -o -name "*babe*" -o -name "*group*" -o -name "*care*" \) -exec rm -rf "{}" \; 2>/dev/null
 
 # khusus whatsapp
 echo "hapus whatsapp useless folder"
@@ -51,7 +51,7 @@ find . -type f -name "*.log" -exec rm -f {} \;
 
 # penghapusan apk biar gk numpuk
 find . -type f -name "*.apk" -exec rm -f {} \;
- 
+
 ######################################################
 #================= O L D S T U F F END =====================#
 ######################################################
@@ -61,23 +61,23 @@ echo "membersihkan telegram"
 find /storage/emulated/0/Telegram/ -type f \( -iname \*.jpg -o -iname \*.png -o -iname \*.apk -o -iname \*.mp4 -o -iname \*.oga -o -iname \*.pdf -o -iname \*.7zip -o -iname \*.m4a -o -iname \*.rar -o -iname \*.flac -o -iname \*.txt -o -iname \*.sh -o -iname \*.zip -o -iname \*.mp3 \) -exec rm -f {} \; 2>/dev/null
 rm -rf Android/data/org.telegram.messenger/cache 2>/dev/null
 
-#neko X 
+#neko X
 rm -rf Android/data/nekox.messenger/files/caches 2>/dev/null
 find Android/data/nekox.messenger/files -type f \( -iname \*.jpg -o -iname \*.png -o -iname \*.apk -o -iname \*.mp4 -o -iname \*.oga -o -iname \*.pdf -o -iname \*.7zip -o -iname \*.m4a -o -iname \*.rar -o -iname \*.flac -o -iname \*.txt -o -iname \*.sh -o -iname \*.zip -o -iname \*.mp3 \) -exec rm -f {} \; 2>/dev/null
 
 
 # telegram x cleaner
 find Android/data/org.thunderdog.challegram/ -type f \( -iname \*.jpg -o -iname \*.png -o -iname \*.apk -o -iname \*.mp4 -o -iname \*.oga -o -iname \*.pdf -o -iname \*.7zip -o -iname \*.m4a -o -iname \*.rar -o -iname \*.flac -o -iname \*.txt -o -iname \*.sh -o -iname \*.zip -o -iname \*.mp3 \) -exec rm -f {} \; 2>/dev/null
-rm -rf Android/data/org.thunderdog.challegram/cache 2>/dev/null 
+rm -rf Android/data/org.thunderdog.challegram/cache 2>/dev/null
 
 # some yeah for MIUI
 rm dctp 2>/dev/null
 rm did 2>/dev/null
 
 #miui simple advanced way
-find /storage/emulated/0/MIUI/ -type d \( -name "*debug_log*" -o -name "*config*" -o -name "*Gallery*" -o -name "*snapshot*" -o -name "*cache*" \) -exec rm -rf "{}" \; 2>/dev/null
+find /storage/emulated/0/MIUI/ -type d \( -name "*debug_log*" -o -name "*config*" -o -name "*Gallery*" -o -name "*snapshot*"  \) -exec rm -rf "{}" \; 2>/dev/null
 
-# root side 
+# root side
 # please running on root access
 
 # cleaning data
@@ -103,7 +103,7 @@ rm -f /data/local/tmp/* 2>/dev/null
 rm -f /data/last_alog/*.log 2>/dev/null
 rm -f /data/last_alog/*.txt 2>/dev/null
 rm -f /data/last_kmsg/*.log 2>/dev/null
-rm -f /data/last_kmsg/*.txt 
+rm -f /data/last_kmsg/*.txt
 rm -f /data/mlog/* 2>/dev/null
 rm -f /data/system/*.log 2>/dev/null
 rm -f /data/system/*.txt 2>/dev/null
@@ -127,7 +127,7 @@ rm -f /data/system/shared_prefs/* 2>/dev/null
 rm -f /data/tombstones/* 2>/dev/null
 fi
 
-#fstrim 
+#fstrim
 fstrim -v /data 2>/dev/null
 fstrim -v /cache 2>/dev/null
 fstrim -v /system 2>/dev/null
