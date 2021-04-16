@@ -4,10 +4,10 @@
 #for fix some annoying
 #pembersih
 echo "Cleaner Extreme V1.0"
-sleep 15
+sleep 5
 clear
 echo "cleaner berjalan......"
-sleep 15
+sleep 5
 clear
 #reworked
 find /storage/emulated/0/ -type d \( -name "*log*" -o -name "*thumbnails*" -o -name "cache" -o -name "*joox*" -o -name "*miniplay*" -o -name "*SHAREit*" -o -name "*Browser*" -o -name "*mtklog*" -o -name "*oppo_log*" -o -name "*ColorOS*" -name "*LOST.DIR*" -o -name "*found000*" -o -name "*albumthumbs*" -o -name "*Backucup*" -o -name "*wlan_logs*" -o -name "*ramdump*" -o -name "UnityAdsVideoCache" -o -name "shading_otp" \) -exec rm -rf "{}" \;  2>/dev/null
@@ -15,13 +15,14 @@ find /storage/emulated/0/ -type f \( -iname \*.log -o -iname \*.CHK -o -iname \*
 
 #vendor hape
 echo "hapus vendor folder hape"
-sleep 15
+sleep 5
 find Android/data -type d \( -name "*xiaomi*" -o -name "*miui*" -o -name "*nearme*" -o -name "*coloros*" -o -name "*oppo*" -o -name "*opera*" -o -name "*MusicApp*" -o -name "*google*" -o -name "com.android*" -o -name "*spotify*" -o -name "*music*" -o -name "*Music*" -name "*lenovo*" -o -name "*snssdk*" -o -name "*facebook*" -o -name "*mind*" -o -name "*UCMobile*" -o -name "*babe*" -o -name "*group*" -o -name "*care*" -o -name "cache" -o -name "*thumbnails*" \) -exec rm -rf "{}" \; 2>/dev/null
 rm -rf Android/data/*mi/
+clear
 
 # khusus whatsapp
 echo "hapus whatsapp useless folder"
-sleep 15
+sleep 5
 find /storage/emulated/0/WhatsApp/ -type d \( -name "*Shared*" -o -name "*Thumbs*" -o -name "*trash*" -o -name "*Backups*" -o -name "*Backups*" -o -name "*Databases*" \) -exec rm -rf "{}" \; 2>/dev/null
 clear
 echo "moar cleaning unecessery"
@@ -38,7 +39,7 @@ find . -depth -type d -empty -exec rmdir {} \;
 find . -type d -depth -exec rmdir {} + 2>/dev/null
 
 #log & more and clean apk
-find . -type f -name "*iacovnfld*" -o -name "*.log" -o -name "*.apk" -exec rm -f {} \;
+find . -type f \( -name "*iacovnfld*" -o -name "*.log" -o -name "*.apk" \) -exec rm -f {} \;
 
 # nomedia yang berarti akan membuat semua yang gk ingin dibaca galeri akhirnya terbaca
 # due to privacy issue i removed
@@ -49,7 +50,7 @@ find . -type f -name "*iacovnfld*" -o -name "*.log" -o -name "*.apk" -exec rm -f
 #================= O L D S T U F F END =====================#
 ######################################################
 echo "membersihkan telegram"
-sleep 15
+sleep 5
 
 # simple telegram
 find /storage/emulated/0/Telegram/ -type f \( -iname \*.jpg -o -iname \*.png -o -iname \*.apk -o -iname \*.mp4 -o -iname \*.oga -o -iname \*.pdf -o -iname \*.7zip -o -iname \*.m4a -o -iname \*.rar -o -iname \*.flac -o -iname \*.txt -o -iname \*.sh -o -iname \*.zip -o -iname \*.mp3 \) -exec rm -f {} \; 2>/dev/null
@@ -77,7 +78,7 @@ clear
 if [ -d /data ];
 then
 echo "pembersihan sampah data"
-sleep 15
+sleep 5
 rm -rf /data/dalvik-cache 2>/dev/null
 rm -rf /cache/*.apk 2>/dev/null
 rm -f /cache/*.tmp 2>/dev/null
@@ -123,7 +124,11 @@ clear
 fi
 
 #fstrim
-fstrim -v /data && fstrim -v /cache && fstrim -v /system && fstrim -v /vendor && fstrim -v /product 2>/dev/null
+fstrim -v /data 
+fstrim -v /cache 
+fstrim -v /system 
+fstrim -v /vendor
+fstrim -v /product 
 
 # reworked
 rm -rf /storage/emulated/0/.CacheOfEUI && rm -rf /storage/emulated/0/.bstats && rm -rf /storage/emulated/0/.taobao && rm -rf /storage/emulated/0/.um && rm -rf /storage/emulated/0/.uxx 2>/dev/null
