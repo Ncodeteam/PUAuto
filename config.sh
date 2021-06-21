@@ -11,6 +11,7 @@ PUBG=/storage/emulated/0/Android/data/com.tencent.ig
 DOWN=/storage/emulated/0/Download/
 NORMAL=/storage/emulated/0/
 PUBGD=Android/data/com.tencent.ig
+ODPBG=/storage/emulated/0/Android/data/com.tencent.ig/files/ShadowTrackerExtra/Saved/PAks/ODPaks
 
 clear
 echo "==================================="
@@ -26,6 +27,7 @@ clear
 echo -e "========================================="
 echo -e "changelog"
 echo -e "a).Refactoring and Added new extension support"
+echo -e "b).some configuration pubg 1.4 to make a good"
 echo -e "========================================="
 sleep 5
 echo "pembersihan"
@@ -43,8 +45,11 @@ echo -ne '=================         (60%)\r'
 sleep 1
 echo -ne '=====================     (80%)\r'
 # reworked engine bash for pubg mobile global and korean maybe i want to support to another pubg but i think maybe
-find $PUBG  -type d \( -name "*TGPA*" -o -name "*ProgramBinaryCache*" -o -name "*cache*" -o -name "*Logs*" -o -name "*Pandora*" -o -name "*LightData*" -o -name "*GameErrorNoRecords*" -o -name "*StatEventReportedFlag*" -o -name "*PufferEifs0*" -o -name "*PufferEifs1*" \) -exec rm -rf "{}" \;  2>/dev/null
+find $PUBG -type d \( -name "*TGPA*" -o -name "*ProgramBinaryCache*" -o -name "*cache*" -o -name "*Logs*" -o -name "*Pandora*" -o -name "*LightData*" -o -name "*GameErrorNoRecords*" -o -name "*StatEventReportedFlag*" -o -name "*PufferEifs0*" -o -name "*PufferEifs1*" \) -exec rm -rf "{}" \;  2>/dev/null
 rm Android/data/com.tencent.ig/files/cacheFile.txt 2>/dev/null
+
+# ODPAKS Remover 
+find $ODPBG -type f \( -iname \*.pak \) -exec rm -f {} \; 2>/dev/null
 
 find $PUBGKR -type d \( -name "*TGPA*" -o -name "*ProgramBinaryCache*" -o -name "*cache*" -o -name "*Logs*" -o -name "*Pandora*" -o -name "*LightData*" -o -name "*GameErrorNoRecords*" -o -name "*StatEventReportedFlag*" -o -name "*PufferEifs0*" -o -name "*PufferEifs1*" \) -exec rm -rf "{}" \;  2>/dev/null
 rm Android/data/com.pubg.krmobile/files/cacheFile.txt 2>/dev/null
@@ -59,14 +64,14 @@ clear
 # reworked for pak and enjoy
 
 # installer simple for pubg since i dont want any complex INSTALLER
-if [-d $PUBGD ];
+if [ -d $PUBGD ];
 then
 echo "installing....."
 find $DOWN -name '*.pak' -exec cp -r "{}" Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Paks/ \;
 find $NORMAL -name '*.cache' -exec cp -r "{}" Android/data/com.tencent.ig/files/ \;
 find $NORMAL -name '*EnjoyCJZC*.ini' -exec cp -r "{}" Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Config/Android/ \;
 find $NORMAL -name '*GameUserSettings*.ini' -exec cp -r "{}" Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Config/Android/ \;
-find $DOWN -name '*.sav' -exec cp -r "{}" Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/
+find $DOWN -name '*.sav' -exec cp -r "{}" Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/ \;
 echo "done!"
 else
 echo "some file maybe lost but if you dont know about that ignore this message"
